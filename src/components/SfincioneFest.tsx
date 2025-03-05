@@ -156,7 +156,7 @@ export default function SfincioneFest() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-black/95 backdrop-blur-lg z-50 flex flex-col"
           >
-            <div className="flex justify-between items-center p-6">
+            <div className="flex justify-between items-center p-6 bg-black">
               <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-red-600 bg-clip-text text-transparent">
                 Sfincione Fest
               </h2>
@@ -169,7 +169,7 @@ export default function SfincioneFest() {
                 <X size={24} />
               </Button>
             </div>
-            <div className="flex flex-col items-center justify-center flex-1 space-y-8 text-center">
+            <div className="flex flex-col items-center justify-center flex-1 space-y-8 text-center bg-black">
               {[
                 { name: "About", href: "#about" },
                 { name: "Schedule", href: "#schedule" },

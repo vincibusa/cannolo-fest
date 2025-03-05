@@ -82,16 +82,6 @@ export default function Header() {
         </div>
 
         {/* Register Button (Desktop) */}
-        <MotionDiv
-          className="hidden md:block"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Button className="bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white shadow-lg shadow-red-600/20 border-0">
-            Register Now
-          </Button>
-        </MotionDiv>
       </div>
 
       {/* Mobile Menu */}
@@ -101,9 +91,9 @@ export default function Header() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 bg-black/95 backdrop-blur-lg z-50 flex flex-col"
+          className="fixed inset-0 bg-black z-50 flex flex-col"
         >
-          <div className="flex justify-between items-center p-6">
+          <div className="flex justify-between items-center p-6 !bg-black">
             <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-red-600 bg-clip-text text-transparent">
               Sfincione Fest
             </h2>
@@ -116,7 +106,7 @@ export default function Header() {
               <X size={24} />
             </Button>
           </div>
-          <div className="flex flex-col items-center justify-center flex-1 space-y-8 text-center">
+          <div className="flex flex-col items-center justify-center flex-1 space-y-8 text-center !bg-black">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -127,9 +117,6 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <Button className="mt-8 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white text-lg px-8 py-6 shadow-lg shadow-red-600/20 border-0">
-              Register Now
-            </Button>
           </div>
         </MotionDiv>
       )}
