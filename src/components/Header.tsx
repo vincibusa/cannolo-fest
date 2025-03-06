@@ -69,22 +69,28 @@ const Header: React.FC = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          className="relative"
         >
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            Sfincione Fest
-          </h1>
-        </MotionDiv>
+          <a href="/" className="block">
+            <img 
+              src="/LogoSfincione.png"
+              alt="Sfincione Fest Logo"
+              className="h-12 md:h-16 w-auto"
+            />
+
+                </a>
+              </MotionDiv>
 
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((item, index) => {
-            const isActive = activeSection === item.href.replace("#", "");
-            return (
+              const isActive = activeSection === item.href.replace("#", "");
+              return (
               <MotionDiv
-                key={item.name}
+                  key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 * index }}
-              >
+                >
                 <a
                   href={item.href}
                   className={cn(
@@ -103,11 +109,11 @@ const Header: React.FC = () => {
                   className={cn(
                       "absolute -bottom-1 left-0 h-0.5 bg-amber-500 transition-all duration-300",
                       isActive ? "w-full" : "w-0 group-hover:w-full"
-                  )}
+      )}
                   ></span>
                 </a>
               </MotionDiv>
-            );
+  );
           })}
         </nav>
 
@@ -120,7 +126,7 @@ const Header: React.FC = () => {
               scrolled
                 ? "text-gray-700 hover:bg-gray-100"
                 : "text-black hover:bg-black/10"
-      )}
+            )}
           >
             <Menu size={24} />
           </Button>
@@ -147,9 +153,11 @@ const Header: React.FC = () => {
           className="fixed inset-0 w-screen h-screen bg-white z-[100] flex flex-col overflow-hidden"
         >
           <div className="flex justify-between items-center p-6">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-              Sfincione Fest
-            </h2>
+            <img 
+              src="/logo-dark.png"
+              alt="Sfincione Fest Logo"
+              className="h-10 w-auto"
+            />
             <Button
               variant="ghost"
               size="icon"
@@ -174,7 +182,7 @@ const Header: React.FC = () => {
                 >
                   {item.name}
                 </a>
-  );
+              );
             })}
             <Button className="mt-8 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white text-lg px-8 py-6 shadow-lg shadow-red-600/20 border-0">
               Register Now

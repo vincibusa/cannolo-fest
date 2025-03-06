@@ -33,9 +33,13 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="sm:col-span-2"
           >
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
-              Sfincione Fest
-            </h3>
+                  <a href="/" className="block">
+         <img 
+                src="/LogoSfincione.png" // Usa la versione scura del logo
+                alt="Sfincione Fest Logo"
+                className="h-16 w-auto mb-4"
+              />
+              </a>
             <p className="text-gray-600 mb-6 max-w-md">
               Celebrating the authentic flavors of Sicily's favorite street food. Join us for a weekend of culinary delights, cultural performances, and community celebration.
             </p>
