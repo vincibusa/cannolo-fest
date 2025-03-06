@@ -1,4 +1,3 @@
-// src/components/PresentersSection.tsx
 import React from "react";
 import { MotionDiv, MotionImg } from "../components/ui/motion-div";
 import { Button } from "../components/ui/button";
@@ -86,7 +85,7 @@ const PresentersSection: React.FC = () => {
   return (
     <section
       id="presenters"
-      className="py-24 bg-gradient-to-b from-neutral-800 to-neutral-900 relative overflow-hidden"
+      className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1200&q=40')] bg-fixed bg-center bg-no-repeat bg-cover opacity-5"></div>
@@ -103,11 +102,11 @@ const PresentersSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 to-red-500 bg-clip-text text-transparent inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
             Presenters & Artists
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-red-600 mx-auto rounded-full"></div>
-          <p className="text-white/70 mt-6 max-w-2xl mx-auto text-base sm:text-lg">
+          <div className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full"></div>
+          <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-base sm:text-lg">
             Meet the talented chefs, musicians, and performers who will make the Sfincione Fest an unforgettable experience
           </p>
         </MotionDiv>
@@ -121,9 +120,9 @@ const PresentersSection: React.FC = () => {
             viewport={{ once: true }}
             className="mb-10 text-center"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-amber-400 inline-block relative">
+            <h3 className="text-xl sm:text-2xl font-bold text-amber-600 inline-block relative">
               Featured Chefs & Presenters
-              <div className="h-0.5 w-full bg-gradient-to-r from-amber-400/30 to-red-600/30 absolute bottom-0 left-0"></div>
+              <div className="h-0.5 w-full bg-gradient-to-r from-amber-500/30 to-red-600/30 absolute bottom-0 left-0"></div>
             </h3>
           </MotionDiv>
 
@@ -138,9 +137,9 @@ const PresentersSection: React.FC = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <div className="bg-neutral-900/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-white/5 group-hover:border-amber-500/30 transition-all duration-300 h-full">
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group-hover:border-amber-500/30 transition-all duration-300 h-full">
                   <div className="relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent z-10 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent z-10 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
                     <MotionImg
                       src={presenter.image}
                       alt={presenter.name}
@@ -153,7 +152,7 @@ const PresentersSection: React.FC = () => {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="rounded-full bg-black/50 backdrop-blur-sm hover:bg-amber-500/80 text-white h-9 w-9"
+                            className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-amber-500/80 text-gray-800 hover:text-white h-9 w-9"
                           >
                             <Instagram size={16} />
                           </Button>
@@ -162,7 +161,7 @@ const PresentersSection: React.FC = () => {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="rounded-full bg-black/50 backdrop-blur-sm hover:bg-amber-500/80 text-white h-9 w-9"
+                            className="rounded-full bg-white/80 backdrop-blur-sm hover:bg-amber-500/80 text-gray-800 hover:text-white h-9 w-9"
                           >
                             <Twitter size={16} />
                           </Button>
@@ -170,15 +169,14 @@ const PresentersSection: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="p-5 text-center">
-                    <h4 className="text-lg font-bold text-white mb-1">
+                    <h4 className="text-lg font-bold text-gray-800 mb-1">
                       {presenter.name}
                     </h4>
-                    <p className="text-amber-400 text-sm mb-3">
+                    <p className="text-amber-600 text-sm mb-3">
                       {presenter.role}
                     </p>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-gray-600 text-sm">
                       {presenter.description}
                     </p>
                   </div>
@@ -197,9 +195,9 @@ const PresentersSection: React.FC = () => {
             viewport={{ once: true }}
             className="mb-10 text-center"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-amber-400 inline-block relative">
+            <h3 className="text-xl sm:text-2xl font-bold text-amber-600 inline-block relative">
               Featured Artists & Performers
-              <div className="h-0.5 w-full bg-gradient-to-r from-amber-400/30 to-red-600/30 absolute bottom-0 left-0"></div>
+              <div className="h-0.5 w-full bg-gradient-to-r from-amber-500/30 to-red-600/30 absolute bottom-0 left-0"></div>
             </h3>
           </MotionDiv>
 
@@ -213,7 +211,7 @@ const PresentersSection: React.FC = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="bg-neutral-900/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-white/5 group-hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col md:flex-row">
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 group-hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col md:flex-row">
                   <div className="relative w-full md:w-2/5 overflow-hidden">
                     <MotionImg
                       src={artist.image}
@@ -222,28 +220,26 @@ const PresentersSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                     />
                   </div>
-
                   <div className="p-5 md:p-6 flex flex-col justify-between md:w-3/5">
                     <div>
-                      <h4 className="text-lg font-bold text-white mb-1">
+                      <h4 className="text-lg font-bold text-gray-800 mb-1">
                         {artist.name}
                       </h4>
-                      <p className="text-amber-400 text-sm mb-3">
+                      <p className="text-amber-600 text-sm mb-3">
                         {artist.type}
                       </p>
-                      <p className="text-white/70 text-sm mb-4">
+                      <p className="text-gray-600 text-sm mb-4">
                         {artist.description}
                       </p>
                     </div>
-
                     <div className="mt-auto">
-                      <div className="flex items-center text-white/60 text-sm">
-                        <CalendarIcon size={16} className="mr-2 text-amber-400" />
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <CalendarIcon size={16} className="mr-2 text-amber-600" />
                         <span>{artist.performance}</span>
                       </div>
                       <Button
                         variant="ghost"
-                        className="mt-3 w-full justify-start text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 px-3 py-1 h-auto text-sm"
+                        className="mt-3 w-full justify-start text-amber-600 hover:text-amber-700 hover:bg-amber-50 px-3 py-1 h-auto text-sm"
                       >
                         View Full Performance Schedule
                       </Button>

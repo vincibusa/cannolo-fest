@@ -19,7 +19,6 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("");
 
-  // Blocca lo scroll quando il menu mobile è aperto
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -34,17 +33,11 @@ const Header: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
-      // Determina quale sezione è attualmente visibile
       const currentPosition = window.scrollY + window.innerHeight / 3;
-      
-      // Trova l'ultima sezione visibile nell'ordine del documento
       let currentSection = "";
-      
       navLinks.forEach(({ href }) => {
         const sectionId = href.replace("#", "");
         const element = document.getElementById(sectionId);
-        
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (currentPosition >= offsetTop && currentPosition <= offsetTop + offsetHeight) {
@@ -52,16 +45,13 @@ const Header: React.FC = () => {
           }
         }
       });
-      
       if (currentSection !== activeSection) {
         setActiveSection(currentSection);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Esegui handleScroll immediatamente dopo il montaggio per impostare la sezione iniziale
     setTimeout(handleScroll, 100);
-    
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
 
@@ -70,7 +60,7 @@ const Header: React.FC = () => {
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
         scrolled
-          ? "bg-black/80 backdrop-blur-md py-3 shadow-lg"
+          ? "bg-white/80 backdrop-blur-md py-3 shadow-lg"
           : "bg-transparent py-6"
       )}
     >
@@ -80,12 +70,11 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-400 to-red-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
             Sfincione Fest
           </h1>
         </MotionDiv>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((item, index) => {
             const isActive = activeSection === item.href.replace("#", "");
@@ -100,15 +89,21 @@ const Header: React.FC = () => {
                   href={item.href}
                   className={cn(
                     "relative font-medium transition-colors duration-300 group",
-                    isActive ? "text-amber-300" : "text-white hover:text-amber-300"
+                    scrolled
+                      ? isActive
+                        ? "text-amber-600"
+                        : "text-gray-700 hover:text-amber-600"
+                      : isActive
+                      ? "text-amber-600"
+                      : "text-white hover:text-amber-600"
                   )}
                 >
                   {item.name}
-                  <span 
-                    className={cn(
-                      "absolute -bottom-1 left-0 h-0.5 bg-amber-400 transition-all duration-300",
+                  <span
+                  className={cn(
+                      "absolute -bottom-1 left-0 h-0.5 bg-amber-500 transition-all duration-300",
                       isActive ? "w-full" : "w-0 group-hover:w-full"
-                    )}
+                  )}
                   ></span>
                 </a>
               </MotionDiv>
@@ -116,19 +111,21 @@ const Header: React.FC = () => {
           })}
         </nav>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setMobileMenuOpen(true)}
-            className="text-white hover:bg-white/10"
+            className={cn(
+              scrolled
+                ? "text-gray-700 hover:bg-gray-100"
+                : "text-black hover:bg-black/10"
+      )}
           >
             <Menu size={24} />
           </Button>
         </div>
 
-        {/* Register Button (Desktop) */}
         <MotionDiv
           className="hidden md:block"
           initial={{ opacity: 0, x: 20 }}
@@ -141,24 +138,23 @@ const Header: React.FC = () => {
         </MotionDiv>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <MotionDiv
           initial={{ opacity: 0, x: "100%" }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 w-screen h-screen bg-black z-[100] flex flex-col overflow-hidden"
+          className="fixed inset-0 w-screen h-screen bg-white z-[100] flex flex-col overflow-hidden"
         >
           <div className="flex justify-between items-center p-6">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-red-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
               Sfincione Fest
             </h2>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:bg-white/10"
+              className="text-gray-700 hover:bg-gray-100"
             >
               <X size={24} />
             </Button>
@@ -172,13 +168,13 @@ const Header: React.FC = () => {
                   href={item.href}
                   className={cn(
                     "text-2xl font-medium transition-colors",
-                    isActive ? "text-amber-300" : "text-white hover:text-amber-300"
+                    isActive ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
-              );
+  );
             })}
             <Button className="mt-8 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white text-lg px-8 py-6 shadow-lg shadow-red-600/20 border-0">
               Register Now
