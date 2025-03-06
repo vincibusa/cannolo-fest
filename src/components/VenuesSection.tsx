@@ -43,10 +43,7 @@ const venues = [
 
 const VenuesSection: React.FC = () => {
   return (
-    <section
-      id="venues"
-      className="py-24 bg-neutral-800 relative overflow-hidden"
-    >
+    <section id="venues" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=40')] bg-fixed bg-center bg-no-repeat bg-cover opacity-5"></div>
 
@@ -58,7 +55,7 @@ const VenuesSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 to-red-500 bg-clip-text text-transparent inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
             Entertainment Venues
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-red-600 mx-auto rounded-full"></div>
@@ -74,7 +71,7 @@ const VenuesSection: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="group"
             >
-              <div className="bg-neutral-900 rounded-xl overflow-hidden shadow-2xl h-full border border-white/5 group-hover:border-amber-500/20 transition-all duration-500">
+              <div className="bg-white rounded-xl overflow-hidden shadow-md h-full border border-gray-200 group-hover:border-amber-500/20 transition-all duration-500">
                 <div className="relative overflow-hidden">
                   <MotionImg
                     src={venue.image}
@@ -91,10 +88,10 @@ const VenuesSection: React.FC = () => {
                 </div>
 
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-xl font-bold text-amber-400 mb-3 group-hover:text-white transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-amber-600 mb-3 group-hover:text-neutral-800 transition-colors duration-300">
                     {venue.title}
                   </h3>
-                  <p className="mb-4 text-white/70 group-hover:text-white/90 transition-colors duration-300">
+                  <p className="mb-4 text-neutral-600 group-hover:text-neutral-800 transition-colors duration-300">
                     {venue.description}
                   </p>
                   <ul className="space-y-2">
@@ -111,7 +108,7 @@ const VenuesSection: React.FC = () => {
                         className="flex items-start"
                       >
                         <span className="text-amber-500 mr-2 text-lg">•</span>
-                        <span className="text-white/60 group-hover:text-white/80 transition-colors duration-300">
+                        <span className="text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">
                           {feature}
                         </span>
                       </MotionDiv>

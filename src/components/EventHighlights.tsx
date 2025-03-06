@@ -31,7 +31,7 @@ const highlights = [
 
 const EventHighlights: React.FC = () => {
   return (
-    <section className="py-24 bg-neutral-800 relative overflow-hidden">
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
         <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-amber-500 blur-[100px]"></div>
@@ -46,7 +46,7 @@ const EventHighlights: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 to-red-500 bg-clip-text text-transparent inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
             Event Highlights
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-red-600 mx-auto rounded-full"></div>
@@ -63,7 +63,7 @@ const EventHighlights: React.FC = () => {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <div className="bg-neutral-900/80 backdrop-blur-sm p-5 sm:p-8 rounded-xl shadow-2xl border border-white/5 h-full transition-all duration-300 group-hover:border-amber-500/30 relative overflow-hidden">
+              <div className="bg-white p-5 sm:p-8 rounded-xl shadow-md border border-gray-200 h-full transition-all duration-300 group-hover:border-amber-500/30 relative overflow-hidden">
                 <div className="absolute -right-4 -top-4 text-5xl opacity-20 group-hover:opacity-30 transition-opacity duration-300">
                   {item.icon}
                 </div>
@@ -77,7 +77,7 @@ const EventHighlights: React.FC = () => {
                 >
                   {item.title}
                 </h3>
-                <p className="text-white/70 group-hover:text-white/90 transition-colors duration-300">
+                <p className="text-neutral-600 group-hover:text-neutral-800 transition-colors duration-300">
                   {item.description}
                 </p>
                 <div className="h-1 w-0 bg-gradient-to-r from-amber-400 to-red-600 mt-6 rounded-full transition-all duration-500 group-hover:w-full"></div>

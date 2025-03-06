@@ -7,11 +7,7 @@ const tickets = [
   {
     title: "Early Bird",
     price: "€25",
-    features: [
-      "Full festival access",
-      "Welcome drink",
-      "Tasting tokens (5)",
-    ],
+    features: ["Full festival access", "Welcome drink", "Tasting tokens (5)"],
   },
   {
     title: "Standard",
@@ -39,7 +35,7 @@ const tickets = [
 
 const RegistrationSection: React.FC = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-neutral-900 via-red-900/30 to-black relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-white via-amber-50 to-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=40')] bg-fixed bg-center bg-no-repeat bg-cover opacity-10"></div>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
@@ -57,13 +53,13 @@ const RegistrationSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 text-neutral-800">
             Join Us at{" "}
-            <span className="bg-gradient-to-r from-amber-300 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
               Sfincione Fest!
             </span>
           </h2>
-          <p className="text-base sm:text-xl mb-6 sm:mb-10 max-w-3xl mx-auto text-white/80 px-2">
+          <p className="text-base sm:text-xl mb-6 sm:mb-10 max-w-3xl mx-auto text-neutral-700 px-2">
             Secure your spot at the most delicious festival of the year. Early
             bird tickets available now!
           </p>
@@ -89,18 +85,18 @@ const RegistrationSection: React.FC = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <div className="bg-neutral-900/80 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-xl border border-white/10 group-hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md border border-gray-200 group-hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col">
+                  <h3 className="text-xl font-bold text-neutral-800 mb-2">
                     {ticket.title}
                   </h3>
-                  <div className="text-3xl font-bold text-amber-400 mb-4">
+                  <div className="text-3xl font-bold text-amber-600 mb-4">
                     {ticket.price}
                   </div>
                   <ul className="space-y-2 mb-6 flex-grow">
                     {ticket.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className="flex items-center text-white/70"
+                        className="flex items-center text-neutral-700"
                       >
                         <span className="text-amber-500 mr-2">✓</span>
                         {feature}

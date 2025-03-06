@@ -12,10 +12,9 @@ import LocationSection from "@/components/LocationSection";
 import RegistrationSection from "@/components/RegistrationSection";
 import Footer from "@/components/Footer";
 
-
 const SfincioneFest: React.FC = () => {
   return (
-    <div className="min-h-screen bg-neutral-900 text-white">
+    <div className="min-h-screen bg-white text-neutral-800">
       <Header />
       <HeroCarousel />
       <AboutSection />

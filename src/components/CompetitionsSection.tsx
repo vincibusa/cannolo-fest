@@ -82,7 +82,7 @@ const CompetitionsSection: React.FC = () => {
   return (
     <section
       id="competitions"
-      className="py-24 bg-gradient-to-b from-neutral-900 to-neutral-800 relative overflow-hidden"
+      className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=40')] bg-fixed bg-center bg-no-repeat bg-cover opacity-5"></div>
@@ -99,12 +99,13 @@ const CompetitionsSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 to-red-500 bg-clip-text text-transparent inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
             Festival Competitions
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-red-600 mx-auto rounded-full"></div>
-          <p className="text-white/70 mt-6 max-w-2xl mx-auto text-base sm:text-lg">
-            Test your skills and taste in our exciting culinary competitions with amazing prizes
+          <p className="text-neutral-600 mt-6 max-w-2xl mx-auto text-base sm:text-lg">
+            Test your skills and taste in our exciting culinary competitions
+            with amazing prizes
           </p>
         </MotionDiv>
 
@@ -118,7 +119,7 @@ const CompetitionsSection: React.FC = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-neutral-900/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-white/5 group-hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 group-hover:border-amber-500/30 transition-all duration-300 h-full flex flex-col">
                 <div className="relative overflow-hidden h-64">
                   <MotionImg
                     src={competition.image}
@@ -128,14 +129,14 @@ const CompetitionsSection: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent opacity-60"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-2xl font-bold text-neutral-800 mb-2">
                       {competition.title}
                     </h3>
                   </div>
                 </div>
 
                 <div className="p-6 flex-grow">
-                  <p className="text-white/80 mb-6">
+                  <p className="text-neutral-700 mb-6">
                     {competition.description}
                   </p>
 
@@ -143,7 +144,7 @@ const CompetitionsSection: React.FC = () => {
                     {competition.details.map((detail, detailIndex) => (
                       <div key={detailIndex} className="flex items-start">
                         <span className="text-amber-500 mr-2 text-lg">•</span>
-                        <span className="text-white/70">{detail}</span>
+                        <span className="text-neutral-700">{detail}</span>
                       </div>
                     ))}
                   </div>
@@ -170,15 +171,15 @@ const CompetitionsSection: React.FC = () => {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <div className="bg-neutral-800/80 backdrop-blur-sm p-5 rounded-xl shadow-xl border border-white/5 group-hover:border-amber-500/20 transition-all duration-300 h-full flex flex-col">
-                <h3 className="text-xl font-bold text-amber-400 mb-2 group-hover:text-white transition-colors duration-300">
+              <div className="bg-white p-5 rounded-xl shadow-md border border-gray-200 group-hover:border-amber-500/20 transition-all duration-300 h-full flex flex-col">
+                <h3 className="text-xl font-bold text-amber-600 mb-2 group-hover:text-neutral-800 transition-colors duration-300">
                   {contest.title}
                 </h3>
-                <p className="text-white/70 text-sm mb-4 flex-grow">
+                <p className="text-neutral-600 text-sm mb-4 flex-grow">
                   {contest.description}
                 </p>
-                <div className="flex justify-between items-center text-sm border-t border-white/10 pt-4 mt-2">
-                  <div className="flex items-center text-white/60">
+                <div className="flex justify-between items-center text-sm border-t border-gray-200 pt-4 mt-2">
+                  <div className="flex items-center text-neutral-600">
                     <Clock size={14} className="mr-2 text-amber-500" />
                     <span>{contest.time}</span>
                   </div>
@@ -198,15 +199,15 @@ const CompetitionsSection: React.FC = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-neutral-800/50 backdrop-blur-sm p-8 rounded-xl border border-amber-500/20 max-w-3xl mx-auto">
-            <h3 className="text-xl font-bold text-white mb-4">
+          <div className="bg-white p-8 rounded-xl shadow-md border border-amber-500/20 max-w-3xl mx-auto">
+            <h3 className="text-xl font-bold text-neutral-800 mb-4">
               How to Participate
             </h3>
-            <p className="text-white/80 mb-6">
+            <p className="text-neutral-700 mb-6">
               Registration for all competitions is available at the festival
               information booth or online. Entry fees apply for professional
-              categories, while amateur and children's competitions are free
-              to enter with festival admission.
+              categories, while amateur and children's competitions are free to
+              enter with festival admission.
             </p>
             <Button className="bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white border-0 rounded-full px-8">
               Download Competition Rules

@@ -1,4 +1,4 @@
-import SfincioneFest from "../pages/SfincioneFest";
+import SfincioneFest from "./SfincioneFest";
 
 function Home() {
   return <SfincioneFest />;

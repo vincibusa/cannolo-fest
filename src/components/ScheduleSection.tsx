@@ -35,7 +35,7 @@ const scheduleDays = [
 
 const ScheduleSection: React.FC = () => {
   return (
-    <section id="schedule" className="py-24 bg-neutral-900 relative">
+    <section id="schedule" className="py-24 bg-white relative">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-amber-500/5 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-red-600/5 to-transparent"></div>
@@ -48,7 +48,7 @@ const ScheduleSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 to-red-500 bg-clip-text text-transparent inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
             Festival Schedule
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-red-600 mx-auto rounded-full"></div>
@@ -75,7 +75,7 @@ const ScheduleSection: React.FC = () => {
               </div>
 
               <div
-                className={`ml-8 sm:ml-10 lg:ml-0 pl-4 sm:pl-6  bg-neutral-800/80 backdrop-blur-sm p-6 sm:p-10 rounded-xl shadow-2xl border border-${day.color}-500/20 hover:border-${day.color}-500/40 transition-all duration-300`}
+                className={`ml-8 sm:ml-10 lg:ml-0 pl-4 sm:pl-6 bg-white p-6 sm:p-10 rounded-xl shadow-md border border-${day.color}-500/20 hover:border-${day.color}-500/40 transition-all duration-300`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                   <div>
@@ -84,12 +84,13 @@ const ScheduleSection: React.FC = () => {
                     >
                       {day.day}
                     </span>
-                    <h3 className="text-2xl font-bold text-white">
+                    <h3 className="text-2xl font-bold text-neutral-800">
                       {day.title}
                     </h3>
                   </div>
-                  <p className="text-white/70 flex items-center mt-2 sm:mt-0 text-sm sm:text-base">
-                    <Clock size={16} className="mr-2 text-amber-400" /> {day.time}
+                  <p className="text-neutral-600 flex items-center mt-2 sm:mt-0 text-sm sm:text-base">
+                    <Clock size={16} className="mr-2 text-amber-400" />{" "}
+                    {day.time}
                   </p>
                 </div>
 
@@ -106,10 +107,12 @@ const ScheduleSection: React.FC = () => {
                       viewport={{ once: true }}
                       className="flex items-start group"
                     >
-                      <div className={`min-w-[80px] sm:min-w-[120px] text-xs sm:text-sm font-mono text-${day.color}-400 mr-3 sm:mr-6`}>
+                      <div
+                        className={`min-w-[80px] sm:min-w-[120px] text-xs sm:text-sm font-mono text-${day.color}-400 mr-3 sm:mr-6`}
+                      >
                         {event.time}
                       </div>
-                      <div className="flex-1 text-white/80 group-hover:text-white transition-colors duration-200">
+                      <div className="flex-1 text-neutral-700 group-hover:text-neutral-900 transition-colors duration-200">
                         {event.desc}
                       </div>
                     </MotionDiv>
