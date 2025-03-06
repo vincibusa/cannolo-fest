@@ -85,7 +85,7 @@ const artists = [
 
 const PresentersSection: React.FC = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="presenters" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       <motion.div 
         animate={{
           scale: [1, 1.2, 1],
