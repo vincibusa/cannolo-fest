@@ -75,7 +75,7 @@ const ScheduleSection: React.FC = () => {
               </div>
 
               <div
-                className={`ml-8 sm:ml-10 lg:ml-0 pl-4 sm:pl-6 lg:pl-0 bg-neutral-800/80 backdrop-blur-sm p-6 sm:p-10 rounded-xl shadow-2xl border border-${day.color}-500/20 hover:border-${day.color}-500/40 transition-all duration-300`}
+                className={`ml-8 sm:ml-10 lg:ml-0 pl-4 sm:pl-6  bg-neutral-800/80 backdrop-blur-sm p-6 sm:p-10 rounded-xl shadow-2xl border border-${day.color}-500/20 hover:border-${day.color}-500/40 transition-all duration-300`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                   <div>
