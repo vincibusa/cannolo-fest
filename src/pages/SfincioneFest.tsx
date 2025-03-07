@@ -9,6 +9,7 @@ import VenuesSection from "@/components/VenuesSection";
 import CompetitionsSection from "@/components/CompetitionsSection";
 import PresentersSection from "@/components/PresentersSection";
 import LocationSection from "@/components/LocationSection";
+import SponsorSection from "@/components/SponsorSection";
 import RegistrationSection from "@/components/RegistrationSection";
 import Footer from "@/components/Footer";
 
@@ -24,6 +25,7 @@ const SfincioneFest: React.FC = () => {
       <CompetitionsSection />
       <PresentersSection />
       <LocationSection />
+      <SponsorSection />
       <RegistrationSection />
       <Footer />
     </div>
