@@ -41,22 +41,15 @@ const AboutSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
           >
-          <motion.span 
-            className="text-amber-600 font-medium mb-4 block"
-                  whileHover={{ scale: 1.05 }}
-          >
-            Welcome to Sicily's Premier Food Festival
-          </motion.span>
+   
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            About Sfincione Fest
+            COS'E' LO SFINCIONE FEST
           </h2>
           <motion.div 
             className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
             whileHover={{ width: "120px" }}
           />
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Join us for an unforgettable celebration of Sicily's beloved street food tradition
-                      </p>
+        
                     </MotionDiv>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -72,13 +65,10 @@ const AboutSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 300 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl font-bold text-gray-800">
-                A Celebration of <span className="text-amber-600">Tradition</span>
-              </h3>
+            
               <p className="text-gray-600 leading-relaxed">
-                Sfincione Fest is an annual celebration dedicated to Sicily's beloved street food, 
-                the Sfincione di Bagheria. This three-day festival brings together bakers, chefs, 
-                food enthusiasts, and tourists from across Italy and beyond.
+               E' un evento unico nel suo genere che celebra lo <b>sfincione</b> come ambasciatore del territorio, forte attrattore enogastronomico e turistico
+               , la cui produzione mobilita una filiera agroalimentare variegata e sostenibile.
               </p>
             </motion.div>
 

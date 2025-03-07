@@ -26,6 +26,30 @@ const patrocinioContributo = [
     name: "Sicilia Enogastronomica",
     image: "/sponsor/4 siciliaenogastronomica-02.png",
   },
+  
+];
+
+const patrocinio = [
+  {
+    name: "Comune di Bagheria",
+    image: "/sponsor/5 comune di bagheria.png",
+  },
+
+];
+
+const partnership = [
+  {
+    name: "Camera di Commercio",
+    image: "/sponsor/6 camera di commercio-02.png",
+  },
+  {
+    name: "Sprint",
+    image: "/sponsor/sprint-02.png",
+  },
+  {
+    name: "Punto Impresa",
+    image: "/sponsor/7 punto impresa-02.png",
+  },
   {
     name: "FEAMPA",
     image: "/sponsor/FEAMPA.png",
@@ -38,27 +62,9 @@ const patrocinioContributo = [
     name: "Ministero",
     image: "/sponsor/MINISTERO-02.png",
   },
-];
-
-const patrocinio = [
   {
-    name: "Comune di Bagheria",
-    image: "/sponsor/5 comune di bagheria.png",
-  },
-  {
-    name: "Camera di Commercio",
-    image: "/sponsor/6 camera di commercio-02.png",
-  },
-];
-
-const partnership = [
-  {
-    name: "Sprint",
-    image: "/sponsor/sprint-02.png",
-  },
-  {
-    name: "Punto Impresa",
-    image: "/sponsor/7 punto impresa-02.png",
+    name: "Regione",
+    image: "/sponsor/sponsor-02.png",
   },
 ];
 
@@ -68,8 +74,8 @@ const mainSponsor = [
     image: "/sponsor/DECO-02.png",
   },
   {
-    name: "Moretti Arena",
-    image: "/sponsor/MORETTI FORNI.png",
+    name: "Riggi",
+    image: "/sponsor/RIGGI.png",
   },
   {
     name: "Sagrim Electrolux",
@@ -85,14 +91,14 @@ const mainSponsor = [
 const officialCategories = [
   {
     title: "OFFICIAL WATER",
-    sponsors: [{ name: "Acqua Panna", image: "/sponsor/all food-02.png" }],
+    sponsors: [{ name: "Acqua Panna", image: "/sponsor/acqua panna-02.png" }],
   },
   {
     title: "OFFICIAL WINE",
     sponsors: [{ name: "Bonsignore", image: "/sponsor/bonsignore-02.png" }],
   },
   {
-    title: "OFFICIAL AWARD",
+    title: "OFFICIAL AMARO",
     sponsors: [{ name: "Granamaro", image: "/sponsor/granamaro-02.png" }],
   },
   {

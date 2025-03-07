@@ -1,7 +1,7 @@
 // src/SfincioneFest.tsx
 import React from "react";
 import Header from "@/components/Header";
-import HeroCarousel from "@/components/HeroCarousel";
+
 import AboutSection from "@/components/AboutSection";
 import EventHighlights from "@/components/EventHighlights";
 import ScheduleSection from "@/components/ScheduleSection";
@@ -12,12 +12,13 @@ import LocationSection from "@/components/LocationSection";
 import SponsorSection from "@/components/SponsorSection";
 import RegistrationSection from "@/components/RegistrationSection";
 import Footer from "@/components/Footer";
+import HeroVideo from "@/components/HeroVideo";
 
 const SfincioneFest: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-neutral-800">
       <Header />
-      <HeroCarousel />
+    <HeroVideo />
       <AboutSection />
       <EventHighlights />
       <ScheduleSection />
