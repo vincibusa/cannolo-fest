@@ -7,80 +7,66 @@ import { ArrowRight } from "lucide-react";
 
 const presenters = [
   {
-    name: "Marco Rossi",
-    role: "Master Chef & Host",
+    name: "Sasà Salvaggio",
+    role: "Conduttore",
     image:
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&q=80",
+      "/personaggi/sasa-salvaggio.png",
     description:
-      "Award-winning chef known for his innovative approach to traditional Sicilian cuisine.",
+      "Comico, conduttore e attore televisivo siciliano, noto per il suo umorismo",
     social: { instagram: "#", twitter: "#" },
   },
   {
-    name: "Sofia Bianchi",
-    role: "Food Historian",
+    name: "Barbara Politi",
+    role: "Conduttrice",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+      "/personaggi/marianna-bonanno.png",
     description:
-      "Author and historian specializing in the culinary traditions of Sicily and Southern Italy.",
+      "Giornalista e conduttrice televisiva. Ha lavorato per Gazzetta del Mezzogiorno, Gambero Rosso tv e Rai",
     social: { instagram: "#", twitter: "#" },
   },
   {
-    name: "Antonio Marino",
-    role: "Sfincione Champion",
+    name: "Massimo Minutella",
+    role: "Conduttore",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+      "/personaggi/Senza titolo-13.png",
     description:
-      "Three-time winner of the Sfincione competition and owner of Bagheria's most beloved bakery.",
+      "Conduttore di Casa Minutella, un talk show basato principalmente su problematiche locali",
     social: { instagram: "#" },
   },
   {
-    name: "Giulia Esposito",
-    role: "Culinary Director",
+    name: "Nadia La Malfa",
+    role: "Giornalista sportiva",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      "/personaggi/nadia-la-malfa.png",
     description:
-      "Responsible for curating the festival's food experiences and cooking demonstrations.",
+      "Giornalista sportiva e comunicatrice istituzionale palermitana",
     social: { instagram: "#", twitter: "#" },
   },
 ];
 
 const artists = [
   {
-    name: "I Cantori Siciliani",
-    type: "Folk Music Ensemble",
+    name: "I Cugini di Campagna",
+  
     image:
-      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&q=80",
-    description:
-      "Traditional Sicilian folk music group performing authentic songs that have been passed down through generations.",
-    performance: "Main Stage - Day 1, 4:00 PM",
+      "/concerti/cugini-campagna.png",
+
   },
   {
-    name: "Balletto di Palermo",
-    type: "Dance Company",
+    name: "I Quaranta che Ballano i 90",
+
     image:
-      "https://images.unsplash.com/photo-1545128485-c400ce7b6892?w=800&q=80",
-    description:
-      "Contemporary dance company blending traditional Sicilian movements with modern choreography.",
-    performance: "Main Stage - Day 2, 2:00 PM",
+      "/concerti/quaranta2.png",
+
   },
   {
-    name: "Maria Terranova",
-    type: "Opera Singer",
+    name: "Sugarfree",
+ 
     image:
-      "https://images.unsplash.com/photo-1549213783-8284d0336c4f?w=800&q=80",
-    description:
-      "Renowned soprano performing classic Sicilian arias and folk songs with a powerful, emotive voice.",
-    performance: "Main Stage - Day 1, 7:00 PM",
+      "/concerti/sugarfree.png",
+
   },
-  {
-    name: "Quartetto Mediterraneo",
-    type: "Jazz Quartet",
-    image:
-      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&q=80",
-    description:
-      "Fusion jazz ensemble incorporating traditional Sicilian melodies with contemporary jazz improvisation.",
-    performance: "Main Stage - Day 2, 8:00 PM",
-  },
+
 ];
 
 const PresentersSection: React.FC = () => {
@@ -130,7 +116,7 @@ const PresentersSection: React.FC = () => {
 
         <div className="mb-20">
           <h3 className="text-2xl font-bold text-gray-800 mb-12 text-center">
-            Featured Chefs & Presenters
+            I Nostri Presentatori
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {presenters.map((presenter, index) => (
@@ -150,12 +136,11 @@ const PresentersSection: React.FC = () => {
                     <MotionImg
                       src={presenter.image}
                       alt={presenter.name}
-                      className="w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover aspect-[3/4]"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.6 }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                    
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
                       <div className="flex gap-3">
                         {presenter.social.instagram && (
@@ -184,11 +169,8 @@ const PresentersSection: React.FC = () => {
                     <h4 className="text-xl font-bold text-gray-800 mb-2">
                       {presenter.name}
                     </h4>
-                    <p className="text-amber-600 font-medium mb-3">
+                    <p className="text-amber-600 font-medium">
                       {presenter.role}
-                    </p>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {presenter.description}
                     </p>
                   </div>
                 </motion.div>
@@ -199,9 +181,9 @@ const PresentersSection: React.FC = () => {
 
         <div>
           <h3 className="text-2xl font-bold text-gray-800 mb-12 text-center">
-            Featured Artists & Performers
+            I Nostri Artisti
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {artists.map((artist, index) => (
               <MotionDiv
                 key={index}
@@ -213,45 +195,22 @@ const PresentersSection: React.FC = () => {
               >
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group-hover:border-amber-200 transition-all duration-300 h-full flex flex-col md:flex-row"
+                  className="relative overflow-hidden rounded-2xl shadow-lg"
                 >
-                  <div className="relative w-full md:w-2/5 overflow-hidden">
+                  <div className="relative aspect-[4/3]">
                     <MotionImg
                       src={artist.image}
                       alt={artist.name}
-                      className="w-full h-64 md:h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-contain bg-gray-50"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.6 }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h4 className="text-xl font-bold text-white text-center">
+                      {artist.name}
+                    </h4>
                   </div>
-
-                  <div className="p-6 md:p-8 flex flex-col justify-between flex-grow">
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-800 mb-2">
-                        {artist.name}
-                      </h4>
-                      <p className="text-amber-600 font-medium mb-4">
-                        {artist.type}
-                      </p>
-                      <p className="text-gray-600 leading-relaxed mb-6">
-                        {artist.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <div className="flex items-center text-gray-500 mb-4">
-                        <CalendarIcon size={18} className="mr-2 text-amber-600" />
-                        {artist.performance}
-                      </div>
-                      <motion.button
-                        whileHover={{ x: 5 }}
-                        className="text-amber-600 font-medium flex items-center group/button"
-                      >
-                        View Schedule
-                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/button:translate-x-1" />
-                      </motion.button>
-                    </div>
                   </div>
                 </motion.div>
               </MotionDiv>
