@@ -1,6 +1,6 @@
 import React from "react";
 import { MotionDiv } from "./ui/motion-div";
-import { Calendar, ArrowRight, Info } from 'lucide-react';
+import { Calendar, Info } from 'lucide-react';
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 
@@ -49,35 +49,8 @@ const HeroVideo = () => {
                 <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
                 Il primo festival del cannolo nel mondo
                 </p>
-              {/* Bottoni CTA */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative group w-full sm:w-[200px]"
-      >
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-red-500 rounded-full opacity-75 blur-xl group-hover:opacity-100 transition-opacity duration-300" />
-            <Button className="relative w-full bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white h-[52px] rounded-full text-base font-medium overflow-hidden">
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-              <div className="relative flex items-center justify-center space-x-2">
-                      <span>Acquista i Biglietti</span>
-        <motion.div
-          initial={{ x: 0 }}
-                  whileHover={{ x: 5 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 10,
-                    repeat: Infinity,
-                    repeatType: "reverse"
-            }}
-          >
-                  <ArrowRight className="w-5 h-5" />
-                </motion.div>
-              </div>
-            </Button>
-          </motion.div>
-
+              {/* Solo pulsante "Scopri di Più" */}
+        <div className="flex justify-center items-center">
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

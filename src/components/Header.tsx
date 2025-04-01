@@ -74,7 +74,7 @@ const Header: React.FC = () => {
           <a href="/" className="block">
             <img 
               src="/logo.png"
-              alt="Sfincione Fest Logo"
+              alt="Cannolo Fest Logo"
               className="h-12 md:h-16 w-auto"
             />
 
@@ -131,17 +131,6 @@ const Header: React.FC = () => {
             <Menu size={24} />
           </Button>
         </div>
-
-        <MotionDiv
-          className="hidden md:block"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Button className="bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white shadow-lg shadow-red-600/20 border-0">
-            Register Now
-          </Button>
-        </MotionDiv>
       </div>
 
       {mobileMenuOpen && (
@@ -150,43 +139,60 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 w-screen h-screen bg-white z-[100] flex flex-col overflow-hidden"
+          className="fixed inset-0 w-screen h-screen bg-gradient-to-b from-amber-50 to-white z-[100] flex flex-col overflow-hidden"
         >
-          <div className="flex justify-between items-center p-6">
-            <img 
-              src="/logo-dark.png"
-              alt="Sfincione Fest Logo"
-              className="h-10 w-auto"
-            />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-700 hover:bg-gray-100"
-            >
-              <X size={24} />
-            </Button>
+          <div className="relative bg-gradient-to-r from-amber-100 to-amber-50 p-6 shadow-md">
+            <div className="flex justify-between items-center">
+              <img 
+                src="/logo.png"
+                alt="Cannolo Fest Logo"
+                className="h-16 w-auto"
+              />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-amber-600 hover:bg-amber-100 rounded-full"
+              >
+                <X size={24} />
+              </Button>
+            </div>
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-amber-300 to-red-400"></div>
           </div>
-          <div className="flex flex-col items-center justify-center flex-1 space-y-8 text-center p-4">
-            {navLinks.map((item) => {
+          
+          <div className="flex flex-col items-center justify-center flex-1 space-y-6 text-center p-8 overflow-y-auto">
+            {navLinks.map((item, index) => {
               const isActive = activeSection === item.href.replace("#", "");
               return (
-                <a
+                <MotionDiv
                   key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "text-2xl font-medium transition-colors",
-                    isActive ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.05 * index }}
+                  className="w-full"
                 >
-                  {item.name}
-                </a>
+                  <a
+                    href={item.href}
+                    className={cn(
+                      "relative text-xl font-medium transition-colors duration-300 block py-3 px-4 rounded-lg border border-transparent",
+                      isActive 
+                        ? "text-amber-600 bg-amber-50 border-amber-200" 
+                        : "text-gray-700 hover:text-amber-600 hover:bg-amber-50/50"
+                    )}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-amber-400 to-red-400"></span>
+                    )}
+                  </a>
+                </MotionDiv>
               );
             })}
-            <Button className="mt-8 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white text-lg px-8 py-6 shadow-lg shadow-red-600/20 border-0">
-              Register Now
-            </Button>
+          </div>
+          
+          <div className="p-4 text-center text-sm text-gray-500 bg-amber-50/50 border-t border-amber-100">
+            <p>© {new Date().getFullYear()} Cannolo Fest</p>
           </div>
         </MotionDiv>
       )}
