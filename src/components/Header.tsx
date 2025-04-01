@@ -139,9 +139,9 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 w-screen h-screen bg-gradient-to-b from-amber-50 to-white z-[100] flex flex-col overflow-hidden"
+          className="fixed inset-0 w-screen h-screen bg-white z-[100] flex flex-col overflow-hidden"
         >
-          <div className="relative bg-gradient-to-r from-amber-100 to-amber-50 p-6 shadow-md">
+          <div className="p-6 border-b border-gray-100">
             <div className="flex justify-between items-center">
               <img 
                 src="/logo.png"
@@ -152,15 +152,14 @@ const Header: React.FC = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-amber-600 hover:bg-amber-100 rounded-full"
+                className="text-gray-500 hover:text-gray-700"
               >
                 <X size={24} />
               </Button>
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-amber-300 to-red-400"></div>
           </div>
           
-          <div className="flex flex-col items-center justify-center flex-1 space-y-6 text-center p-8 overflow-y-auto">
+          <div className="flex flex-col items-center justify-center flex-1 space-y-7 text-center p-8 overflow-y-auto">
             {navLinks.map((item, index) => {
               const isActive = activeSection === item.href.replace("#", "");
               return (
@@ -174,24 +173,19 @@ const Header: React.FC = () => {
                   <a
                     href={item.href}
                     className={cn(
-                      "relative text-xl font-medium transition-colors duration-300 block py-3 px-4 rounded-lg border border-transparent",
-                      isActive 
-                        ? "text-amber-600 bg-amber-50 border-amber-200" 
-                        : "text-gray-700 hover:text-amber-600 hover:bg-amber-50/50"
+                      "text-xl font-medium transition-colors duration-300 block py-3",
+                      isActive ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
                     )}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                    {isActive && (
-                      <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-amber-400 to-red-400"></span>
-                    )}
                   </a>
                 </MotionDiv>
               );
             })}
           </div>
           
-          <div className="p-4 text-center text-sm text-gray-500 bg-amber-50/50 border-t border-amber-100">
+          <div className="p-4 text-center text-sm text-gray-500 border-t border-gray-100">
             <p>© {new Date().getFullYear()} Cannolo Fest</p>
           </div>
         </MotionDiv>
