@@ -31,19 +31,23 @@ const HeroVideo = () => {
                 <div className="flex items-center justify-center gap-4 mb-6">
                   <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm">
                     <Calendar className="w-4 h-4 mr-2" />
-                  6-7-8-9 Novembre 2025
+                  17-18 Maggio 2025
                   </span>
                   <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm">
-                   Bagheria
+                   Piana Degli Albanesi
                   </span>
                 </div>
       
-              {/* Titolo e sottotitolo */}
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white leading-tight">
-                Sfincione Fest
-                </h2>
+              {/* Logo e sottotitolo */}
+                <div className="flex justify-center mb-4">
+                  <img 
+                    src="/logo_cannolofest-08.png" 
+                    alt="Cannolo Fest" 
+                    className="h-32 md:h-40 object-contain"
+                  />
+                </div>
                 <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-                La più grande festa dello street food siciliano
+                Il primo festival del cannolo nel mondo
                 </p>
               {/* Bottoni CTA */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">

@@ -7,23 +7,23 @@ const AboutSection: React.FC = () => {
   const features = [
     {
       icon: <Users className="w-6 h-6" />,
-      title: "20+ Bakeries",
-      description: "Traditional bakeries showcasing their best Sfincione"
+      title: "20+ Pasticcerie",
+      description: "Pasticcerie tradizionali che mostrano i loro migliori cannoli"
     },
     {
       icon: <Calendar className="w-6 h-6" />,
-      title: "Live Events",
-      description: "Daily cooking demonstrations by master chefs"
+      title: "Eventi dal Vivo",
+      description: "Dimostrazioni culinarie quotidiane di maestri pasticcieri"
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Competitions",
-      description: "Annual awards and people's choice recognition"
+      title: "Competizioni",
+      description: "Premi annuali e riconoscimenti dalla scelta del pubblico"
     },
     {
       icon: <History className="w-6 h-6" />,
-      title: "Rich History",
-      description: "Celebrating centuries of Sicilian tradition"
+      title: "Storia Ricca",
+      description: "Celebrazione della tradizione siciliana e arbëreshë"
     }
   ];
 
@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
           >
    
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            COS'E' LO SFINCIONE FEST
+            COS'È IL CANNOLO FEST
           </h2>
           <motion.div 
             className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
@@ -67,8 +67,7 @@ const AboutSection: React.FC = () => {
             >
             
               <p className="text-gray-600 leading-relaxed">
-               E' un evento unico nel suo genere che celebra lo <b>sfincione</b> come ambasciatore del territorio, forte attrattore enogastronomico e turistico
-               , la cui produzione mobilita una filiera agroalimentare variegata e sostenibile.
+               È un evento unico nel suo genere che celebra uno dei simboli più gustosi e riconosciuti della pasticceria siciliana, forte attrattore enogastronomico e turistico, la cui produzione mobilita una filiera agroalimentare variegata e sostenibile.
               </p>
             </motion.div>
 
@@ -78,12 +77,10 @@ const AboutSection: React.FC = () => {
               className="space-y-6"
             >
               <h3 className="text-2xl font-bold text-gray-800">
-                The <span className="text-red-600">Authentic</span> Experience
+                La <span className="text-red-600">Storia</span> Arbëreshë
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Experience the unique taste of Sfincione di Bagheria – a thick, spongy pizza topped 
-                with tomatoes, onions, anchovies, and caciocavallo cheese, all sprinkled with 
-                breadcrumbs, created through a time-honored process.
+                Il Cannolo Fest è un omaggio alla storia degli Arbëreshë, il popolo albanese che si insediò più di 500 anni fa in questo territorio, portando con sé tradizioni e una ricca eredità culturale.
               </p>
             </motion.div>
 
@@ -93,12 +90,10 @@ const AboutSection: React.FC = () => {
               className="space-y-6"
             >
               <h3 className="text-2xl font-bold text-gray-800">
-                Our <span className="text-amber-600">Story</span>
+                La <span className="text-amber-600">Produzione</span>
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Since 2015, we've been preserving and promoting this culinary tradition that dates 
-                back to the 17th century. Each year, we welcome over 10,000 visitors who come to 
-                experience the authentic flavors of Sicily.
+                Una produzione di Catanzaro & Partners, società che organizza e produce eventi di caratura nazionale, impegnata nell'organizzazione dell'evento e nella valorizzazione turistico-rurale del territorio regionale, attraverso la progettazione e attuazione di politiche di sviluppo territoriale e di marketing turistico.
               </p>
             </motion.div>
           </MotionDiv>
@@ -119,8 +114,8 @@ const AboutSection: React.FC = () => {
                 className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-red-600/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
               <MotionImg
-                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80"
-                alt="Traditional Sfincione"
+                src="https://images.unsplash.com/photo-1635924339056-b122fb1e418e?w=800&q=80"
+                alt="Cannoli tradizionali siciliani"
                 className="w-full h-[400px] object-cover rounded-2xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}

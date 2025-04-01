@@ -1,7 +1,7 @@
 import React from "react";
 import { MotionDiv } from "../components/ui/motion-div";
 import { Button } from "../components/ui/button";
-import { Facebook, Instagram, Twitter, MapPinIcon } from "lucide-react";
+import { Facebook, Instagram, Twitter, MapPinIcon, UserIcon, PhoneIcon } from "lucide-react";
 
 const quickLinks = [
   { name: "About", href: "#about" },
@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
           >
                   <a href="/" className="block">
          <img 
-                src="/LogoSfincione.png" // Usa la versione scura del logo
-                alt="Sfincione Fest Logo"
+                src="/logo.png" // Usa la versione scura del logo
+                alt="Cannolo Fest Logo"
                 className="h-16 w-auto mb-4"
               />
               </a>
@@ -107,6 +107,34 @@ const Footer: React.FC = () => {
                   Piazza Centrale, Bagheria, Sicily, Italy
                 </span>
               </li>
+              <li className="flex items-start">
+                <UserIcon
+                  size={20}
+                  className="mr-3 text-amber-600 mt-1 flex-shrink-0"
+                />
+                <div className="text-gray-600">
+                  <strong>ADALBERTO CATANZARO</strong><br />
+                  Ceo & Marketing Manager<br />
+                  <div className="flex items-center mt-1">
+                    <PhoneIcon size={16} className="mr-1 text-amber-600" />
+                    <span>+39 327 167 7871</span>
+                  </div>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <UserIcon
+                  size={20}
+                  className="mr-3 text-amber-600 mt-1 flex-shrink-0"
+                />
+                <div className="text-gray-600">
+                  <strong>SALVO SCADUTO</strong><br />
+                  Strategic Relationship<br />
+                  <div className="flex items-center mt-1">
+                    <PhoneIcon size={16} className="mr-1 text-amber-600" />
+                    <span>+39 333 867 2394</span>
+                  </div>
+                </div>
+              </li>
               <li className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,24 +150,7 @@ const Footer: React.FC = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="text-gray-600">info@sfincionefest.com</span>
-              </li>
-              <li className="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 mr-3 text-amber-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                <span className="text-gray-600">+39 123 456 7890</span>
+                <span className="text-gray-600">info@cannolofest.com</span>
               </li>
             </ul>
           </MotionDiv>
@@ -147,7 +158,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} Sfincione Fest. All rights reserved.
+            &copy; {new Date().getFullYear()} Cannolo Fest. All rights reserved.
           </p>
         </div>
       </div>

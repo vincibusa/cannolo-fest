@@ -73,7 +73,7 @@ const Header: React.FC = () => {
         >
           <a href="/" className="block">
             <img 
-              src="/LogoSfincione.png"
+              src="/logo.png"
               alt="Sfincione Fest Logo"
               className="h-12 md:h-16 w-auto"
             />
