@@ -90,7 +90,7 @@ const ScheduleSection: React.FC = () => {
         </MotionDiv>
 
         <div className="max-w-5xl mx-auto space-y-8 sm:space-y-12 relative">
-          <div className="absolute left-4 sm:left-[27px] lg:left-1/2 top-[60px] bottom-0 w-1 bg-gradient-to-b from-red-600 to-amber-500 rounded-full opacity-30 lg:-ml-0.5"></div>
+          <div className="absolute left-8 sm:left-[27px] lg:left-1/2 top-[60px] bottom-0 w-1 bg-gradient-to-b from-red-600 to-amber-500 rounded-full opacity-30 lg:-ml-0.5"></div>
 
           {scheduleDays.map((day, dayIndex) => (
             <MotionDiv
@@ -104,7 +104,7 @@ const ScheduleSection: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
                     >
                 <div
-                className={`absolute left-0 w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-white flex items-center justify-center z-10 -ml-6 sm:-ml-7 border-2 border-amber-500 shadow-lg 
+                className={`absolute left-0 w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-white flex items-center justify-center z-10 ml-2 -mt-1 sm:-ml-7 border-2 border-amber-500 shadow-lg 
                 lg:left-[calc(100%+20px)] ${
                   dayIndex % 2 === 1 ? "lg:left-auto lg:right-[calc(100%+20px)]" : ""
                   }`}
@@ -112,7 +112,7 @@ const ScheduleSection: React.FC = () => {
                <CalendarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" />
                         </div>
 
-              <div className="ml-8 sm:ml-10 lg:ml-0 pl-4 sm:pl-6 bg-white p-4 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-amber-200 transition-all duration-300">
+              <div className="ml-16 sm:ml-10 lg:ml-0 pl-4 sm:pl-6 bg-white p-4 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-amber-200 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
                     <div>
                     <span className="text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-amber-100 text-amber-700 mb-2 sm:mb-3 inline-block">
