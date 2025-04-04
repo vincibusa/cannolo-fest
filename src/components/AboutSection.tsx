@@ -114,7 +114,7 @@ const AboutSection: React.FC = () => {
                 className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-red-600/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
               <MotionImg
-                src="https://images.unsplash.com/photo-1635924339056-b122fb1e418e?w=800&q=80"
+                src="/about.JPG"
                 alt="Cannoli tradizionali siciliani"
                 className="w-full h-[400px] object-cover rounded-2xl"
                 whileHover={{ scale: 1.05 }}
