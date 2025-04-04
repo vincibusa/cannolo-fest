@@ -1,68 +1,112 @@
 import React from "react";
 import { MotionDiv } from "../components/ui/motion-div";
-import { CalendarIcon, Clock, MapPin } from "lucide-react";
+import { CalendarIcon, MapPin } from "lucide-react";
 
 const scheduleDays = [
   {
-    day: "Day 1",
-    title: "Opening Ceremony",
-    time: "10:00 AM - 8:00 PM",
+    day: "17 Maggio",
+    title: "Apertura Ufficiale",
+    time: "10:00 - 23:00",
     color: "red",
     events: [
       { 
-        time: "10:00 AM", 
-        desc: "Opening speech and ribbon cutting",
-        location: "Main Stage",
-        type: "Ceremony"
+        time: "10:00", 
+        desc: "Cerimonia di apertura con taglio del nastro e discorso delle autorità",
+        location: "Piazza Centrale",
+        type: "Cerimonia"
       },
       { 
-        time: "11:30 AM", 
-        desc: "First cooking demonstration",
-        location: "Culinary Theater",
+        time: "11:30", 
+        desc: "Inaugurazione degli stand delle pasticcerie tradizionali",
+        location: "Via Principale",
+        type: "Esposizione"
+      },
+      { 
+        time: "13:00", 
+        desc: "Dimostrazione di preparazione del cannolo tradizionale",
+        location: "Palco Principale",
         type: "Workshop"
       },
       { 
-        time: "1:00 PM", 
-        desc: "Tasting begins",
-        location: "Food Court",
-        type: "Food"
+        time: "16:00", 
+        desc: "Presentazione della storia del cannolo e tradizione arbëreshë",
+        location: "Piazza della Cultura",
+        type: "Culturale"
       },
       { 
-        time: "4:00 PM", 
-        desc: "Live music performance",
-        location: "Garden Stage",
-        type: "Entertainment"
+        time: "18:00", 
+        desc: "Esibizione di musica e danze tradizionali albanesi",
+        location: "Palco Centrale",
+        type: "Spettacolo"
       },
       { 
-        time: "7:00 PM", 
-        desc: "Evening reception",
-        location: "Grand Hall",
-        type: "Social"
+        time: "20:30", 
+        desc: "Cena con degustazione di piatti della tradizione albanese-siciliana",
+        location: "Area Ristoro",
+        type: "Gastronomia"
       },
     ],
   },
   {
-    day: "Day 2",
-    title: "Main Festival Day",
-    time: "9:00 AM - 10:00 PM",
+    day: "18 Maggio",
+    title: "Giornata Principale del Festival",
+    time: "9:00 - 22:00",
     color: "amber",
     events: [
-      { time: "9:00 AM", desc: "Vendor booths open" },
-      { time: "11:00 AM", desc: "Chef competition begins" },
-      { time: "1:00 PM", desc: "Children's baking workshop" },
-      { time: "3:00 PM", desc: "Cultural presentation on Sfincione history" },
-      { time: "6:00 PM", desc: "Awards ceremony" },
-      { time: "8:00 PM", desc: "Celebration dinner and dancing" },
+      { 
+        time: "9:00", 
+        desc: "Apertura degli stand e colazione tradizionale",
+        location: "Via Principale",
+        type: "Gastronomia"
+      },
+      { 
+        time: "11:00", 
+        desc: "Inizio della competizione 'Il Miglior Cannolo di Sicilia'",
+        location: "Palco Principale",
+        type: "Competizione"
+      },
+      { 
+        time: "13:30", 
+        desc: "Workshop per bambini: impariamo a decorare i cannoli",
+        location: "Area Didattica",
+        type: "Workshop"
+      },
+      { 
+        time: "15:00", 
+        desc: "Tavola rotonda: Il cannolo come attrazione turistica e culturale",
+        location: "Sala Conferenze",
+        type: "Culturale"
+      },
+      { 
+        time: "17:00", 
+        desc: "Premiazione del concorso e riconoscimenti",
+        location: "Palco Centrale",
+        type: "Cerimonia"
+      },
+      { 
+        time: "19:00", 
+        desc: "Concerto di musica moderna e tradizionale",
+        location: "Piazza Centrale",
+        type: "Spettacolo"
+      },
+      { 
+        time: "21:00", 
+        desc: "Spettacolo pirotecnico e chiusura del festival",
+        location: "Vista Panoramica",
+        type: "Spettacolo"
+      },
     ],
   },
 ];
 
 const eventTypeColors = {
-  Ceremony: "bg-purple-100 text-purple-700",
+  Cerimonia: "bg-purple-100 text-purple-700",
   Workshop: "bg-blue-100 text-blue-700",
-  Food: "bg-emerald-100 text-emerald-700",
-  Entertainment: "bg-pink-100 text-pink-700",
-  Social: "bg-amber-100 text-amber-700",
+  Gastronomia: "bg-emerald-100 text-emerald-700",
+  Spettacolo: "bg-pink-100 text-pink-700",
+  Culturale: "bg-amber-100 text-amber-700",
+  Competizione: "bg-red-100 text-red-700",
+  Esposizione: "bg-indigo-100 text-indigo-700",
 };
 
 const ScheduleSection: React.FC = () => {
@@ -81,11 +125,11 @@ const ScheduleSection: React.FC = () => {
           className="mb-12 sm:mb-16 text-center"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
-            Festival Schedule
+            Programma del Festival
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-2">
-            Join us for two days of culinary excellence, entertainment, and cultural celebration. All events are carefully scheduled to ensure you don't miss any of the excitement.
+            Unisciti a noi per due giorni di eccellenza culinaria, intrattenimento e celebrazione culturale. Tutti gli eventi sono programmati con cura per garantirti di non perdere nessuna delle emozioni del Cannolo Fest.
           </p>
         </MotionDiv>
 
@@ -122,11 +166,7 @@ const ScheduleSection: React.FC = () => {
                         {day.title}
                       </h3>
                           </div>
-                  <p className="text-gray-600 flex items-center text-sm sm:text-base mt-2 sm:mt-0">
-                    <Clock className="w-4 h-4 sm:w-[18px] sm:h-[18px] mr-2 text-amber-500" />
-                      {day.time}
-                          </p>
-                        </div>
+                </div>
                 <ul className="space-y-4 sm:space-y-6">
                     {day.events.map((event, eventIndex) => (
                       <MotionDiv
@@ -138,9 +178,6 @@ const ScheduleSection: React.FC = () => {
                         className="group"
                       >
                       <div className="flex flex-col sm:flex-row gap-1 sm:gap-3">
-                        <div className="min-w-[90px] sm:min-w-[120px] text-xs sm:text-sm font-medium text-amber-600">
-                            {event.time}
-                          </div>
                           <div className="flex-1">
                           <div className="flex flex-wrap items-center gap-2 mb-1 sm:mb-2">
                               {event.type && (

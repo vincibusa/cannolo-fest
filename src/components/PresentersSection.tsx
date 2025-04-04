@@ -24,15 +24,7 @@ const presenters = [
       "Giornalista e conduttrice televisiva. Ha lavorato per Gazzetta del Mezzogiorno, Gambero Rosso tv e Rai",
     social: { instagram: "#", twitter: "#" },
   },
-  {
-    name: "Massimo Minutella",
-    role: "Conduttore",
-    image:
-      "/personaggi/Senza titolo-13.png",
-    description:
-      "Conduttore di Casa Minutella, un talk show basato principalmente su problematiche locali",
-    social: { instagram: "#" },
-  },
+
   {
     name: "Nadia La Malfa",
     role: "Giornalista sportiva",
@@ -100,17 +92,17 @@ const PresentersSection: React.FC = () => {
             className="text-amber-600 font-medium mb-4 block"
                       whileHover={{ scale: 1.05 }}
                           >
-            Meet Our Team
+            Il Nostro Team
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            Presenters & Artists
+            Presentatori & Artisti
           </h2>
           <motion.div 
             className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
             whileHover={{ width: "120px" }}
                     />
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Meet the talented chefs, musicians, and performers who will make the Sfincione Fest an unforgettable experience
+            Scopri i talentuosi presentatori, chef e artisti che renderanno il Cannolo Fest un'esperienza indimenticabile
           </p>
               </MotionDiv>
 
@@ -118,7 +110,7 @@ const PresentersSection: React.FC = () => {
           <h3 className="text-2xl font-bold text-gray-800 mb-12 text-center">
             I Nostri Presentatori
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {presenters.map((presenter, index) => (
               <MotionDiv
                 key={index}
@@ -179,7 +171,7 @@ const PresentersSection: React.FC = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <h3 className="text-2xl font-bold text-gray-800 mb-12 text-center">
             I Nostri Artisti
           </h3>
@@ -216,7 +208,7 @@ const PresentersSection: React.FC = () => {
               </MotionDiv>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

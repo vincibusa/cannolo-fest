@@ -5,13 +5,11 @@ import { MotionDiv } from "../components/ui/motion-div";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Schedule", href: "#schedule" },
-  { name: "Venues", href: "#venues" },
-  { name: "Competitions", href: "#competitions" },
-  { name: "Presenters", href: "#presenters" },
-  { name: "Location", href: "#location" },
-  { name: "Contact", href: "#contact" },
+  { name: "Chi Siamo", href: "#about" },
+  { name: "Programma", href: "#schedule" },
+  { name: "Presentatori", href: "#presenters" },
+  { name: "Dove Siamo", href: "#location" },
+  { name: "Contatti", href: "#contact" },
 ];
 
 const Header: React.FC = () => {

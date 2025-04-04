@@ -3,10 +3,10 @@ import React from "react";
 import Header from "@/components/Header";
 
 import AboutSection from "@/components/AboutSection";
-import EventHighlights from "@/components/EventHighlights";
+
 import ScheduleSection from "@/components/ScheduleSection";
-import VenuesSection from "@/components/VenuesSection";
-import CompetitionsSection from "@/components/CompetitionsSection";
+
+
 import PresentersSection from "@/components/PresentersSection";
 import LocationSection from "@/components/LocationSection";
 import SponsorSection from "@/components/SponsorSection";
@@ -20,10 +20,9 @@ const SfincioneFest: React.FC = () => {
       <Header />
     <HeroVideo />
       <AboutSection />
-      <EventHighlights />
+
       <ScheduleSection />
-      <VenuesSection />
-      <CompetitionsSection />
+   
       <PresentersSection />
       <LocationSection />
       <SponsorSection />

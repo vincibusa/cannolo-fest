@@ -4,13 +4,10 @@ import { Button } from "../components/ui/button";
 import { Facebook, Instagram, Twitter, MapPinIcon, UserIcon, PhoneIcon } from "lucide-react";
 
 const quickLinks = [
-  { name: "About", href: "#about" },
-  { name: "Schedule", href: "#schedule" },
-  { name: "Venues", href: "#venues" },
-  { name: "Competitions", href: "#competitions" },
-  { name: "Presenters", href: "#presenters" },
-  { name: "Location", href: "#location" },
-  { name: "Register", href: "#" },
+  { name: "Chi Siamo", href: "#about" },
+  { name: "Programma", href: "#schedule" },
+  { name: "Presentatori", href: "#presenters" },
+  { name: "Dove Siamo", href: "#location" },
 ];
 
 const Footer: React.FC = () => {
@@ -41,7 +38,7 @@ const Footer: React.FC = () => {
               />
               </a>
             <p className="text-gray-600 mb-6 max-w-md">
-              Celebrating the authentic flavors of Sicily's favorite street food. Join us for a weekend of culinary delights, cultural performances, and community celebration.
+              Celebra i sapori autentici dello street food preferito della Sicilia. Unisciti a noi per un weekend di delizie culinarie, spettacoli culturali e festeggiamenti comunitari.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -74,7 +71,7 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold mb-6 text-gray-800">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-6 text-gray-800">Link Rapidi</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -96,7 +93,7 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold mb-6 text-gray-800">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-6 text-gray-800">Contattaci</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPinIcon
@@ -104,7 +101,7 @@ const Footer: React.FC = () => {
                   className="mr-3 text-amber-600 mt-1 flex-shrink-0"
                 />
                 <span className="text-gray-600">
-                  Piazza Centrale, Bagheria, Sicily, Italy
+                  Piazza Centrale, Piana degli Albanesi, Sicilia, Italia
                 </span>
               </li>
               <li className="flex items-start">
@@ -158,7 +155,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} Cannolo Fest. All rights reserved.
+            &copy; {new Date().getFullYear()} Cannolo Fest. Tutti i diritti riservati.
           </p>
         </div>
       </div>

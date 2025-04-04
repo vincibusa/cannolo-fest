@@ -6,75 +6,75 @@ import { motion } from "framer-motion";
 
 const competitions = [
   {
-    title: "Master Sfincione Competition",
+    title: "Il Miglior Cannolo di Sicilia",
     description:
-      "The festival's premier event where professional bakers and chefs compete to create the most authentic and delicious Sfincione di Bagheria.",
+      "La competizione principale del festival dove pasticceri professionisti si sfidano per creare il cannolo più autentico e delizioso secondo la tradizione siciliana.",
     image:
-      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80",
+      "https://images.unsplash.com/photo-1635924339056-b122fb1e418e?w=800&q=80",
     details: [
-      "Open to professional chefs and bakers",
-      "Judged by a panel of culinary experts",
-      "€1,000 grand prize and Golden Sfincione trophy",
-      "Saturday, 2:00 PM at the Culinary Theater",
+      "Aperto a pasticceri professionisti",
+      "Giudicato da una giuria di esperti culinari",
+      "Premio di €1.000 e il trofeo 'Cannolo d'Oro'",
+      "Domenica, ore 11:00 sul Palco Principale",
     ],
   },
   {
-    title: "People's Choice Award",
+    title: "Premio Scelta del Pubblico",
     description:
-      "Festival attendees taste and vote for their favorite Sfincione from participating vendors throughout the festival grounds.",
+      "I visitatori del festival assaggiano e votano il loro cannolo preferito tra tutti quelli proposti dagli stand partecipanti.",
     image:
       "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80",
     details: [
-      "All festival attendees can vote",
-      "Voting tokens included with admission",
-      "Winner receives €500 and featured spot next year",
-      "Voting closes Sunday at 3:00 PM",
+      "Tutti i visitatori possono votare",
+      "Gettoni di voto inclusi nel biglietto d'ingresso",
+      "Il vincitore riceve €500 e uno stand in posizione privilegiata l'anno successivo",
+      "Votazioni chiuse domenica alle 16:00",
     ],
   },
 ];
 
 const contests = [
   {
-    title: "Amateur Chef Challenge",
+    title: "Sfida dei Pasticceri Amatoriali",
     description:
-      "Home cooks compete to create their own interpretation of Sfincione using provided ingredients.",
-    time: "Friday, 3:00 PM",
-    prize: "€300 + Cooking Class",
+      "I cuochi casalinghi competono per creare la loro personale interpretazione del cannolo siciliano utilizzando ingredienti forniti dall'organizzazione.",
+    time: "Sabato, ore 15:00",
+    prize: "€300 + Corso di Pasticceria",
   },
   {
-    title: "Kids Baking Contest",
+    title: "Concorso Junior Pasticceri",
     description:
-      "Young chefs ages 8-14 showcase their pizza-making skills in this fun, supportive environment.",
-    time: "Saturday, 11:00 AM",
-    prize: "Cooking Kit + Medal",
+      "Giovani chef dai 8-14 anni mostrano le loro abilità nella preparazione dei cannoli in un ambiente divertente e stimolante.",
+    time: "Domenica, ore 10:00",
+    prize: "Kit da Pasticceria + Medaglia",
   },
   {
-    title: "Speed Baking Challenge",
+    title: "Sfida Cannolo Speed",
     description:
-      "Contestants race against the clock to prepare a Sfincione in just 30 minutes.",
-    time: "Sunday, 1:00 PM",
-    prize: "€200 + Trophy",
+      "I concorrenti gareggiano contro il tempo per preparare un cannolo perfetto in soli 20 minuti.",
+    time: "Sabato, ore 17:00",
+    prize: "€200 + Trofeo",
   },
   {
-    title: "Creative Toppings Award",
+    title: "Premio Ricotta Creativa",
     description:
-      "Chefs compete to create the most innovative and delicious Sfincione topping combination.",
-    time: "Saturday, 4:00 PM",
-    prize: "€250 + Featured Recipe",
+      "I pasticceri competono per creare la farcitura di ricotta più innovativa e deliziosa per i loro cannoli.",
+    time: "Domenica, ore 14:00",
+    prize: "€250 + Pubblicazione Ricetta",
   },
   {
-    title: "Traditional Recipe Showdown",
+    title: "Sfida Ricetta Tradizionale",
     description:
-      "Contestants prepare Sfincione following traditional methods judged by Bagheria elders.",
-    time: "Sunday, 12:00 PM",
-    prize: "€350 + Certificate",
+      "I concorrenti preparano cannoli seguendo metodi tradizionali, giudicati dagli anziani della comunità arbëreshë.",
+    time: "Sabato, ore 16:00",
+    prize: "€350 + Certificato",
   },
   {
-    title: "Food Photography Contest",
+    title: "Concorso Fotografia Gastronomica",
     description:
-      "Capture the beauty of Sfincione and festival moments for a chance to win prizes.",
-    time: "All Weekend",
-    prize: "Camera Equipment",
+      "Cattura la bellezza dei cannoli e i momenti del festival per avere la possibilità di vincere premi.",
+    time: "Tutto il Weekend",
+    prize: "Attrezzatura Fotografica",
   },
 ];
 
@@ -110,17 +110,17 @@ const CompetitionsSection: React.FC = () => {
             className="text-amber-600 font-medium mb-4 block"
                     whileHover={{ scale: 1.05 }}
           >
-            Show Your Skills
+            Metti alla Prova le Tue Abilità
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            Festival Competitions
+            Competizioni del Festival
           </h2>
           <motion.div 
             className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
             whileHover={{ width: "120px" }}
           />
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Test your skills and taste in our exciting culinary competitions with amazing prizes
+            Metti alla prova le tue abilità di pasticciere nelle nostre emozionanti competizioni culinarie con fantastici premi in palio
                   </p>
             </MotionDiv>
 
@@ -154,11 +154,11 @@ const CompetitionsSection: React.FC = () => {
                     <div className="flex items-center gap-4 text-white/80">
                       <div className="flex items-center">
                         <Trophy className="w-4 h-4 mr-2" />
-                        Grand Prize
+                        Premio Principale
                   </div>
                       <div className="flex items-center">
                         <Users className="w-4 h-4 mr-2" />
-                        Professional
+                        Categoria Professionisti
                 </div>
               </div>
                   </div>
@@ -192,7 +192,7 @@ const CompetitionsSection: React.FC = () => {
                     whileHover={{ scale: 1.02 }}
                     className="w-full bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white py-4 rounded-xl font-medium flex items-center justify-center group"
                   >
-                    Register to Compete
+                    Iscriviti alla Competizione
                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </motion.button>
                 </div>
@@ -250,20 +250,15 @@ const CompetitionsSection: React.FC = () => {
             className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 max-w-3xl mx-auto text-center"
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              How to Participate
+              Sei pronto a mostrare le tue abilità?
             </h3>
             <p className="text-gray-600 mb-8">
-              Registration for all competitions is available at the festival information booth or online. 
-              Entry fees apply for professional categories, while amateur and children's competitions are free to enter with festival admission.
+              Scarica il modulo d'iscrizione e partecipa a una o più competizioni del Cannolo Fest 2025. 
+              Ogni categoria offre l'opportunità di vincere premi esclusivi e il riconoscimento della comunità gastronomica siciliana.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white rounded-full font-medium group"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download Competition Rules
-              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-            </motion.button>
+            <Button className="bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white py-6 px-8 rounded-xl text-lg font-medium flex items-center justify-center mx-auto">
+              <Download className="w-5 h-5 mr-3" /> Scarica il Modulo d'Iscrizione
+            </Button>
           </motion.div>
         </MotionDiv>
       </div>
