@@ -34,7 +34,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-gray-50">
+    <div className="relative w-full h-screen overflow-hidden bg-white">
       {/* Immagini del carosello */}
       <div className="absolute inset-0">
         <AnimatePresence initial={false}>

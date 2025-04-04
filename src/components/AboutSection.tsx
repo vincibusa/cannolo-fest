@@ -28,7 +28,7 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* Decorative backgrounds */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-amber-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-red-50/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />

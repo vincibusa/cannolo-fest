@@ -80,7 +80,7 @@ const contests = [
 
 const CompetitionsSection: React.FC = () => {
   return (
-    <section id="competitions" className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="competitions" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=40')] bg-fixed bg-center bg-no-repeat bg-cover opacity-5"></div>
       <motion.div 
         animate={{

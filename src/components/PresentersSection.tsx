@@ -63,7 +63,7 @@ const artists = [
 
 const PresentersSection: React.FC = () => {
   return (
-    <section id="presenters" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="presenters" className="py-24 bg-white relative overflow-hidden">
       <motion.div 
         animate={{
           scale: [1, 1.2, 1],
@@ -193,7 +193,7 @@ const PresentersSection: React.FC = () => {
                     <MotionImg
                       src={artist.image}
                       alt={artist.name}
-                      className="absolute inset-0 w-full h-full object-contain bg-gray-50"
+                      className="absolute inset-0 w-full h-full object-contain bg-white"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.6 }}
                     />

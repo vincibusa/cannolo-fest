@@ -26,7 +26,7 @@ const LocationSection: React.FC = () => {
   return (
     <section
       id="location"
-      className="py-24 bg-gray-50 relative overflow-hidden"
+      className="py-24 bg-white relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[url('https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?w=1200&q=30')] bg-cover bg-center opacity-5"></div>

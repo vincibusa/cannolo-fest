@@ -111,7 +111,7 @@ const eventTypeColors = {
 
 const ScheduleSection: React.FC = () => {
   return (
-    <section id="schedule" className="py-16 sm:py-24 bg-gray-50 relative">
+    <section id="schedule" className="py-16 sm:py-24 bg-white relative">
       <div className="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-[0.02] pointer-events-none"></div>
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-amber-500/5 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-red-600/5 to-transparent"></div>

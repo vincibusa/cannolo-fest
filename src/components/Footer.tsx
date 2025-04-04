@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   return (
     <footer
       id="contact"
-      className="bg-gray-50 text-gray-800 pt-20 pb-10 relative overflow-hidden"
+      className="bg-white text-gray-800 pt-20 pb-10 relative overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-amber-500 blur-[100px]"></div>
