@@ -111,34 +111,7 @@ const HeroCarousel = () => {
                 Il primo festival del cannolo nel mondo
               </p>
               
-              {/* Pulsante "Scopri di Più" */}
-              <div className="flex justify-center items-center">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="relative group w-full sm:w-[200px]"
-                >
-                  <div className="absolute inset-0 bg-white/30 rounded-full opacity-0 blur-lg group-hover:opacity-75 transition-opacity duration-300" />
-                  <Button 
-                    variant="outline"
-                    className="relative w-full bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 h-[52px] rounded-full text-base font-medium backdrop-blur-sm overflow-hidden"
-                  >
-                    <div className="absolute inset-0 w-full h-full">
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-                    </div>
-                    <div className="relative flex items-center justify-center space-x-2">
-                      <motion.div
-                        initial={{ rotate: 0 }}
-                        whileHover={{ rotate: 180 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Info className="w-5 h-5" />
-                      </motion.div>
-                      <span>Scopri di Più</span>
-                    </div>
-                  </Button>
-                </motion.div>
-              </div>
+
             </MotionDiv>
           </div>
         </div>
