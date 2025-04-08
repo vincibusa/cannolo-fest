@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Cannolo Fest 2025 - Il Festival del Cannolo a Piana degli Albanesi</title>
     
     <!-- Primary Meta Tags -->
@@ -12,6 +12,9 @@
     <meta name="keywords" content="cannolo siciliano, cannolo fest, festival cannolo, piana degli albanesi, tradizione arbëreshë, sicilia, festival gastronomico, dolci siciliani, evento enogastronomico">
     <meta name="author" content="Catanzaro & Partners">
     <link rel="canonical" href="https://www.cannolofest.it/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="geo.region" content="IT-PA">
+    <meta name="geo.placename" content="Piana degli Albanesi">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -19,6 +22,8 @@
     <meta property="og:title" content="Cannolo Fest 2025 - Piana degli Albanesi">
     <meta property="og:description" content="Il primo festival del cannolo nel mondo: due giorni di tradizione, cultura e gastronomia siciliana e arbëreshë. 17-18 Maggio 2025 a Piana degli Albanesi.">
     <meta property="og:image" content="https://www.cannolofest.it/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Cannolo Fest">
     
@@ -28,6 +33,7 @@
     <meta name="twitter:title" content="Cannolo Fest 2025 - Piana degli Albanesi">
     <meta name="twitter:description" content="Il primo festival del cannolo nel mondo: due giorni di tradizione, cultura e gastronomia siciliana e arbëreshë. 17-18 Maggio 2025.">
     <meta name="twitter:image" content="https://www.cannolofest.it/twitter-image.jpg">
+    <meta name="twitter:creator" content="@cannolofest">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,11 +41,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/logo.png" as="image">
+    <link rel="preload" as="font" href="/fonts/main-font.woff2" type="font/woff2" crossorigin>
     
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
@@ -72,7 +81,45 @@
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
           "validFrom": "2025-01-01"
+        },
+        "performer": {
+          "@type": "PerformingGroup",
+          "name": "Pasticceri di Piana degli Albanesi"
         }
+      }
+    </script>
+    
+    <!-- Evento FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quando si svolge il Cannolo Fest 2025?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Il Cannolo Fest 2025 si svolge il 17 e 18 Maggio 2025 a Piana degli Albanesi, in provincia di Palermo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L'ingresso al festival è gratuito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì, l'ingresso al festival è gratuito. Alcune degustazioni o eventi speciali potrebbero richiedere un biglietto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Come si raggiunge Piana degli Albanesi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Piana degli Albanesi si trova a circa 30 km da Palermo. È raggiungibile in auto tramite la SS624 o con i mezzi pubblici (autobus) dalla stazione centrale di Palermo."
+            }
+          }
+        ]
       }
     </script>
   </head>

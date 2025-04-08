@@ -1,0 +1,16 @@
+# Robots.txt per CannoleFest.it
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.cannolofest.it/sitemap.xml
+
+# Crawl-delay per bots pesanti
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10 
