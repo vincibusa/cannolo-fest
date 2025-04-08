@@ -51,7 +51,7 @@ const scheduleDays = [
     day: "18 Maggio",
     title: "Giornata Principale del Festival",
     time: "9:00 - 22:00",
-    color: "amber",
+    color: "red",
     events: [
       { 
         time: "9:00", 
@@ -113,7 +113,7 @@ const ScheduleSection: React.FC = () => {
   return (
     <section id="schedule" className="py-16 sm:py-24 bg-white relative">
       <div className="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-[0.02] pointer-events-none"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-amber-500/5 to-transparent"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-red-600/5 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-red-600/5 to-transparent"></div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -124,17 +124,17 @@ const ScheduleSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-12 sm:mb-16 text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent inline-block">
             Programma del Festival
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full"></div>
+          <div className="h-1 w-20 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-2">
             Unisciti a noi per due giorni di eccellenza culinaria, intrattenimento e celebrazione culturale. Tutti gli eventi sono programmati con cura per garantirti di non perdere nessuna delle emozioni del Cannolo Fest.
           </p>
         </MotionDiv>
 
         <div className="max-w-5xl mx-auto space-y-8 sm:space-y-12 relative">
-          <div className="absolute left-8 sm:left-[27px] lg:left-1/2 top-[60px] bottom-0 w-1 bg-gradient-to-b from-red-600 to-amber-500 rounded-full opacity-30 lg:-ml-0.5"></div>
+          <div className="absolute left-8 sm:left-[27px] lg:left-1/2 top-[60px] bottom-0 w-1 bg-gradient-to-b from-red-600 to-red-700 rounded-full opacity-30 lg:-ml-0.5"></div>
 
           {scheduleDays.map((day, dayIndex) => (
             <MotionDiv
@@ -148,18 +148,18 @@ const ScheduleSection: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
                     >
                 <div
-                className={`absolute left-0 w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-white flex items-center justify-center z-10 ml-2 -mt-1 sm:-ml-7 border-2 border-amber-500 shadow-lg 
+                className={`absolute left-0 w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-white flex items-center justify-center z-10 ml-2 -mt-1 sm:-ml-7 border-2 border-red-600 shadow-lg 
                 lg:left-[calc(100%+20px)] ${
                   dayIndex % 2 === 1 ? "lg:left-auto lg:right-[calc(100%+20px)]" : ""
                   }`}
                 >
-               <CalendarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500" />
+               <CalendarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
                         </div>
 
-              <div className="ml-16 sm:ml-10 lg:ml-0 pl-4 sm:pl-6 bg-white p-4 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-amber-200 transition-all duration-300">
+              <div className="ml-16 sm:ml-10 lg:ml-0 pl-4 sm:pl-6 bg-white p-4 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:border-red-200 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">
                     <div>
-                    <span className="text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-amber-100 text-amber-700 mb-2 sm:mb-3 inline-block">
+                    <span className="text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-red-100 text-red-700 mb-2 sm:mb-3 inline-block">
                         {day.day}
                             </span>
                     <h3 className="text-lg sm:text-2xl font-bold text-gray-800">

@@ -39,10 +39,10 @@ const LocationSection: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent inline-block">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent inline-block">
             Dove Si Svolge
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full"></div>
+          <div className="h-1 w-20 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full"></div>
         </MotionDiv>
 
         <div className="grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
@@ -53,10 +53,10 @@ const LocationSection: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="relative"
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/10 to-red-600/10 rounded-xl blur-xl opacity-70"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-red-600/10 to-red-700/10 rounded-xl blur-xl opacity-70"></div>
             <div className="relative overflow-hidden rounded-xl shadow-lg border border-gray-200">
               <MotionImg
-                src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?w=800&q=80"
+                src="/luogo.JPG"
                 alt="Piana degli Albanesi, Sicilia"
                 className="w-full h-auto"
                 whileHover={{ scale: 1.05 }}
@@ -74,7 +74,7 @@ const LocationSection: React.FC = () => {
           >
             <div className="space-y-2">
               <div className="flex items-center gap-3">
-                <MapPinIcon size={28} className="text-amber-600" />
+                <MapPinIcon size={28} className="text-red-600" />
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-800">
                   Piana degli Albanesi
                 </h3>
@@ -93,14 +93,14 @@ const LocationSection: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                className="bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white shadow-lg shadow-red-600/20 border-0 rounded-full px-8"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg shadow-red-600/20 border-0 rounded-full px-8"
                 onClick={handleOpenDirections}
               >
                 Come Arrivare <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
               <Button
                 variant="outline"
-                className="border-amber-500 text-amber-600 hover:bg-amber-50 rounded-full px-8"
+                className="border-red-600 text-red-600 hover:bg-red-50 rounded-full px-8"
                 onClick={handleOpenMap}
               >
                 Visualizza Mappa <ExternalLink className="ml-2 h-4 w-4" />
@@ -109,21 +109,21 @@ const LocationSection: React.FC = () => {
 
             <div className="space-y-4 pt-4 border-t border-gray-200">
               <div className="flex items-start gap-3">
-                <Info className="w-5 h-5 text-amber-600 mt-1" />
+                <Info className="w-5 h-5 text-red-600 mt-1" />
                 <div>
                   <h4 className="font-medium text-gray-800">La Tradizione Arbëreshë</h4>
                   <p className="text-gray-600">Piana degli Albanesi mantiene ancora oggi la lingua, i costumi e le tradizioni portate dagli albanesi che si insediarono qui più di 500 anni fa, fuggendo dall'invasione ottomana dell'Albania.</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-amber-600" />
+                <Clock className="w-5 h-5 text-red-600" />
                 <div>
                   <h4 className="font-medium text-gray-800">Orari del Festival</h4>
                   <p className="text-gray-600">17-18 Maggio 2025, dalle 10:00 alle 23:00</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-amber-600" />
+                <Phone className="w-5 h-5 text-red-600" />
                 <div>
                   <h4 className="font-medium text-gray-800">Contatto</h4>
                   <p className="text-gray-600">+39 327 167 7871</p>

@@ -76,7 +76,7 @@ const PresentersSection: React.FC = () => {
         }}
         className="absolute inset-0"
       >
-        <div className="absolute top-1/3 right-1/3 w-96 h-96 rounded-full bg-amber-500/10 blur-[100px]"></div>
+        <div className="absolute top-1/3 right-1/3 w-96 h-96 rounded-full bg-red-600/10 blur-[100px]"></div>
         <div className="absolute bottom-1/3 left-1/3 w-96 h-96 rounded-full bg-red-600/10 blur-[100px]"></div>
       </motion.div>
 
@@ -88,17 +88,13 @@ const PresentersSection: React.FC = () => {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <motion.span 
-            className="text-amber-600 font-medium mb-4 block"
-                      whileHover={{ scale: 1.05 }}
-                          >
-            Il Nostro Team
-          </motion.span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
-            Presentatori & Artisti
+       
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
+            Presentatori 
           </h2>
+
           <motion.div 
-            className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
+            className="h-1 w-20 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full mb-8"
             whileHover={{ width: "120px" }}
                     />
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -110,7 +106,7 @@ const PresentersSection: React.FC = () => {
           <h3 className="text-2xl font-bold text-gray-800 mb-12 text-center">
             I Nostri Presentatori
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {presenters.map((presenter, index) => (
               <MotionDiv
                 key={index}
@@ -118,17 +114,17 @@ const PresentersSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 viewport={{ once: true }}
-                className="group"
+                className="group max-w-sm mx-auto w-full"
               >
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group-hover:border-amber-200 transition-all duration-300 h-full"
+                  className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group-hover:border-red-200 transition-all duration-300 flex flex-col"
                 >
-                  <div className="relative overflow-hidden aspect-[3/4]">
+                  <div className="relative overflow-hidden aspect-[3/4] max-h-[280px] flex-shrink-0">
                     <MotionImg
                       src={presenter.image}
                       alt={presenter.name}
-                      className="absolute inset-0 w-full h-full object-cover aspect-[3/4]"
+                      className="absolute inset-0 w-full h-full object-cover object-top"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.6 }}
                     />
@@ -139,7 +135,7 @@ const PresentersSection: React.FC = () => {
                           <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white/90 p-3 rounded-full text-gray-800 hover:text-amber-600 transition-colors"
+                            className="bg-white/90 p-3 rounded-full text-gray-800 hover:text-red-600 transition-colors"
                           >
                             <Instagram size={20} />
                           </motion.button>
@@ -148,7 +144,7 @@ const PresentersSection: React.FC = () => {
                           <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white/90 p-3 rounded-full text-gray-800 hover:text-amber-600 transition-colors"
+                            className="bg-white/90 p-3 rounded-full text-gray-800 hover:text-red-600 transition-colors"
                           >
                             <Twitter size={20} />
                           </motion.button>
@@ -157,11 +153,11 @@ const PresentersSection: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-6 text-center">
+                  <div className="p-4 text-center flex-grow flex flex-col justify-center">
                     <h4 className="text-xl font-bold text-gray-800 mb-2">
                       {presenter.name}
                     </h4>
-                    <p className="text-amber-600 font-medium">
+                    <p className="text-red-600 font-medium">
                       {presenter.role}
                     </p>
                   </div>

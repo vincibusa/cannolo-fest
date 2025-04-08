@@ -30,7 +30,7 @@ const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* Decorative backgrounds */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-amber-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-red-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-red-50/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
       <div className="container mx-auto px-4 relative">
@@ -42,17 +42,17 @@ const AboutSection: React.FC = () => {
           className="text-center max-w-3xl mx-auto mb-16"
           >
    
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
             COS'È IL CANNOLO FEST
           </h2>
           <motion.div 
-            className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
+            className="h-1 w-20 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full mb-8"
             whileHover={{ width: "120px" }}
           />
         
                     </MotionDiv>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           <MotionDiv
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -90,7 +90,7 @@ const AboutSection: React.FC = () => {
               className="space-y-6"
             >
               <h3 className="text-2xl font-bold text-gray-800">
-                La <span className="text-amber-600">Produzione</span>
+                La <span className="text-red-600">Produzione</span>
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Una produzione di Catanzaro & Partners, società che organizza e produce eventi di caratura nazionale, impegnata nell'organizzazione dell'evento e nella valorizzazione turistico-rurale del territorio regionale, attraverso la progettazione e attuazione di politiche di sviluppo territoriale e di marketing turistico.
@@ -111,7 +111,7 @@ const AboutSection: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-red-600/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-700/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
               <MotionImg
                 src="/about.JPG"
@@ -131,7 +131,7 @@ const AboutSection: React.FC = () => {
                 >
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-amber-500/10 to-red-600/10 rounded-full flex items-center justify-center text-amber-600"
+                    className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-red-600/10 to-red-700/10 rounded-full flex items-center justify-center text-red-600"
                   >
                     {feature.icon}
                   </motion.div>

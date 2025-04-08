@@ -173,12 +173,12 @@ const SponsorSection: React.FC = () => {
           className="mb-16 text-center"
         >
           <motion.span
-            className="text-amber-600 font-medium mb-4 block"
+            className="text-red-600 font-medium mb-4 block"
             whileHover={{ scale: 1.05 }}
           >
             I Nostri Partner
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-500 to-red-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
             Sponsor del Festival
           </h2>
           <motion.div

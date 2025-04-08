@@ -94,17 +94,17 @@ const Header: React.FC = () => {
                     "relative font-medium transition-colors duration-300 group",
                     scrolled
                       ? isActive
-                        ? "text-amber-600"
-                        : "text-gray-700 hover:text-amber-600"
+                        ? "text-red-600"
+                        : "text-gray-700 hover:text-red-600"
                       : isActive
-                      ? "text-amber-600"
-                      : "text-white hover:text-amber-600"
+                      ? "text-red-600"
+                      : "text-white hover:text-red-600"
                   )}
                 >
                   {item.name}
                   <span
                   className={cn(
-                      "absolute -bottom-1 left-0 h-0.5 bg-amber-500 transition-all duration-300",
+                      "absolute -bottom-1 left-0 h-0.5 bg-red-600 transition-all duration-300",
                       isActive ? "w-full" : "w-0 group-hover:w-full"
       )}
                   ></span>
@@ -171,7 +171,7 @@ const Header: React.FC = () => {
                     href={item.href}
                     className={cn(
                       "text-xl font-medium transition-colors duration-300 block py-3",
-                      isActive ? "text-amber-600" : "text-gray-700 hover:text-amber-600"
+                      isActive ? "text-red-600" : "text-gray-700 hover:text-red-600"
                     )}
                     onClick={() => setMobileMenuOpen(false)}
                   >

@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
       className="bg-white text-gray-800 pt-20 pb-10 relative overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-amber-500 blur-[100px]"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-red-600 blur-[100px]"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-red-600 blur-[100px]"></div>
       </div>
 
@@ -44,21 +44,21 @@ const Footer: React.FC = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-amber-600"
+                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-600"
               >
                 <Facebook size={20} />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-amber-600"
+                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-600"
               >
                 <Instagram size={20} />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-amber-600"
+                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-600"
               >
                 <Twitter size={20} />
               </Button>
@@ -77,9 +77,9 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-600 hover:text-amber-600 transition-colors duration-300 flex items-center group"
+                    className="text-gray-600 hover:text-red-600 transition-colors duration-300 flex items-center group"
                   >
-                    <span className="w-0 h-0.5 bg-amber-500 mr-0 group-hover:w-2 group-hover:mr-2 transition-all duration-300"></span>
+                    <span className="w-0 h-0.5 bg-red-600 mr-0 group-hover:w-2 group-hover:mr-2 transition-all duration-300"></span>
                     {link.name}
                   </a>
                 </li>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <MapPinIcon
                   size={20}
-                  className="mr-3 text-amber-600 mt-1 flex-shrink-0"
+                  className="mr-3 text-red-600 mt-1 flex-shrink-0"
                 />
                 <span className="text-gray-600">
                   Piazza Centrale, Piana degli Albanesi, Sicilia, Italia
@@ -107,13 +107,13 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <UserIcon
                   size={20}
-                  className="mr-3 text-amber-600 mt-1 flex-shrink-0"
+                  className="mr-3 text-red-600 mt-1 flex-shrink-0"
                 />
                 <div className="text-gray-600">
                   <strong>ADALBERTO CATANZARO</strong><br />
                   Ceo & Marketing Manager<br />
                   <div className="flex items-center mt-1">
-                    <PhoneIcon size={16} className="mr-1 text-amber-600" />
+                    <PhoneIcon size={16} className="mr-1 text-red-600" />
                     <span>+39 327 167 7871</span>
                   </div>
                 </div>
@@ -121,13 +121,13 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <UserIcon
                   size={20}
-                  className="mr-3 text-amber-600 mt-1 flex-shrink-0"
+                  className="mr-3 text-red-600 mt-1 flex-shrink-0"
                 />
                 <div className="text-gray-600">
                   <strong>SALVO SCADUTO</strong><br />
                   Strategic Relationship<br />
                   <div className="flex items-center mt-1">
-                    <PhoneIcon size={16} className="mr-1 text-amber-600" />
+                    <PhoneIcon size={16} className="mr-1 text-red-600" />
                     <span>+39 333 867 2394</span>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ const Footer: React.FC = () => {
               <li className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 mr-3 text-amber-600"
+                  className="h-5 w-5 mr-3 text-red-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
