@@ -71,13 +71,12 @@ const Header: React.FC = () => {
         >
           <a href="/" className="block">
             <img 
-              src="/logo.png"
+              src={scrolled ? "/logo.png" : "/logopre.png"}
               alt="Cannolo Fest Logo"
-              className="h-12 md:h-16 w-auto"
+              className="h-12 md:h-16 w-auto transition-all duration-300"
             />
-
-                </a>
-              </MotionDiv>
+          </a>
+        </MotionDiv>
 
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((item, index) => {

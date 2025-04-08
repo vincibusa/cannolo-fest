@@ -40,7 +40,7 @@ const HeroVideo: React.FC = () => {
               {/* Logo e sottotitolo */}
               <div className="flex justify-center mb-4">
                 <img 
-                  src="/logo_cannolofest-08.png" 
+                  src="/logohero.png" 
                   alt="Cannolo Fest" 
                   className="h-32 md:h-40 object-contain"
                 />

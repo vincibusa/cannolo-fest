@@ -1,6 +1,14 @@
 # Robots.txt per CannoleFest.it
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /temp/
+Disallow: /build/
+Disallow: *.json$
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
 
 # Sitemap
 Sitemap: https://www.cannolofest.it/sitemap.xml
@@ -13,4 +21,21 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 User-agent: MJ12bot
-Crawl-delay: 10 
+Crawl-delay: 10
+
+User-agent: dotbot
+Crawl-delay: 10
+
+User-agent: rogerbot
+Crawl-delay: 10
+
+# Immagini
+User-agent: Googlebot-Image
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Host preferito
+Host: https://www.cannolofest.it 

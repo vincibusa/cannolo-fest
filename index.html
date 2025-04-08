@@ -9,12 +9,14 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Cannolo Fest 2025 - Il Festival del Cannolo a Piana degli Albanesi">
     <meta name="description" content="17-18 Maggio 2025: Il primo festival del cannolo nel mondo a Piana degli Albanesi. Due giorni di celebrazioni della tradizione arbëreshë, spettacoli culturali, competizioni e degustazioni del dolce simbolo della Sicilia.">
-    <meta name="keywords" content="cannolo siciliano, cannolo fest, festival cannolo, piana degli albanesi, tradizione arbëreshë, sicilia, festival gastronomico, dolci siciliani, evento enogastronomico">
+    <meta name="keywords" content="cannolo siciliano, cannolo fest, festival cannolo, piana degli albanesi, tradizione arbëreshë, sicilia, festival gastronomico, dolci siciliani, evento enogastronomico, pasticceria, ricette siciliane">
     <meta name="author" content="Catanzaro & Partners">
     <link rel="canonical" href="https://www.cannolofest.it/">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="geo.region" content="IT-PA">
     <meta name="geo.placename" content="Piana degli Albanesi">
+    <meta name="geo.position" content="37.9947;13.2916">
+    <meta name="ICBM" content="37.9947, 13.2916">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -26,6 +28,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="Cannolo Fest">
+    <meta property="og:updated_time" content="2024-04-08T10:00:00+02:00">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -34,6 +37,7 @@
     <meta name="twitter:description" content="Il primo festival del cannolo nel mondo: due giorni di tradizione, cultura e gastronomia siciliana e arbëreshë. 17-18 Maggio 2025.">
     <meta name="twitter:image" content="https://www.cannolofest.it/twitter-image.jpg">
     <meta name="twitter:creator" content="@cannolofest">
+    <meta name="twitter:site" content="@cannolofest">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -43,12 +47,18 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cannolo Fest">
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/logo.png" as="image">
     <link rel="preload" as="font" href="/fonts/main-font.woff2" type="font/woff2" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" as="script" href="/src/main.tsx">
     
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
@@ -60,6 +70,8 @@
         "image": "https://www.cannolofest.it/og-image.jpg",
         "startDate": "2025-05-17T10:00:00+02:00",
         "endDate": "2025-05-18T22:00:00+02:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
           "@type": "Place",
           "name": "Piana degli Albanesi",
@@ -68,6 +80,11 @@
             "addressLocality": "Piana degli Albanesi",
             "addressRegion": "Palermo",
             "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 37.9947,
+            "longitude": 13.2916
           }
         },
         "organizer": {
@@ -86,6 +103,77 @@
           "@type": "PerformingGroup",
           "name": "Pasticceri di Piana degli Albanesi"
         }
+      }
+    </script>
+    
+    <!-- Locale Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Cannolo Fest",
+        "image": "https://www.cannolofest.it/logo.png",
+        "url": "https://www.cannolofest.it",
+        "telephone": "+39123456789",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Piazza Municipio",
+          "addressLocality": "Piana degli Albanesi",
+          "addressRegion": "Palermo",
+          "postalCode": "90037",
+          "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.9947,
+          "longitude": 13.2916
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Saturday"
+            ],
+            "opens": "10:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.cannolofest.it/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programma",
+            "item": "https://www.cannolofest.it/#schedule"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Location",
+            "item": "https://www.cannolofest.it/#location"
+          }
+        ]
       }
     </script>
     
@@ -117,6 +205,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Piana degli Albanesi si trova a circa 30 km da Palermo. È raggiungibile in auto tramite la SS624 o con i mezzi pubblici (autobus) dalla stazione centrale di Palermo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cosa rende speciale il Cannolo Fest?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Il Cannolo Fest è il primo festival internazionale dedicato al celebre dolce siciliano. L'evento si svolge a Piana degli Albanesi, località famosa per la produzione di cannoli artigianali secondo tradizioni secolari."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quali attività sono previste durante il festival?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Durante il festival sono previste degustazioni, workshop di pasticceria, competizioni tra maestri pasticceri, esibizioni di cucina dal vivo, spettacoli culturali e musicali, tour guidati alla scoperta della tradizione arbëreshë."
             }
           }
         ]
