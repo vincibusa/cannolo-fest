@@ -2,7 +2,42 @@ import React from "react";
 import { MotionDiv, MotionImg } from "../components/ui/motion-div";
 import { motion } from "framer-motion";
 
-// Categorie di sponsor secondo l'immagine
+// Categorie di sponsor secondo l'immagine di riferimento
+const coOrganizzazione = [
+  {
+    name: "Comune di Piana degli Albanesi",
+    image: "/loghi istituzionali/loghi istituzionali-19.png",
+  },
+  {
+    name: "Catanzaro & Partners",
+    image: "/loghi istituzionali/loghi istituzionali-20.png",
+  },
+];
+
+const patrocinioIstituzionale = [
+  {
+    name: "Regione Sicilia",
+    image: "/loghi istituzionali/loghi istituzionali-21.png",
+  },
+  {
+    name: "Sicilia Enogastronomica",
+    image: "/loghi istituzionali/loghi istituzionali-22.png",
+  },  
+];
+
+const mediaPartner = [
+  { 
+    name: "Giornale di Sicilia", 
+    image: "/loghi istituzionali/loghi istituzionali-23.png" 
+  },
+  { 
+    name: "TGS", 
+    image: "/loghi istituzionali/loghi istituzionali-24.png" 
+  },
+];
+
+// Categorie precedenti - mantenute ma commentate per riferimento
+/*
 const organizzato = [
   {
     name: "La Piana d'Oro",
@@ -160,6 +195,7 @@ const mediaPartner = [
   { name: "Fermento Pizza", image: "/sponsor/fermento-02.png" },
   { name: "Centro Studi Aurora", image: "/sponsor/centro studi aurora-02.png" },
 ];
+*/
 
 const SponsorSection: React.FC = () => {
   return (
@@ -179,299 +215,101 @@ const SponsorSection: React.FC = () => {
             I Nostri Partner
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
-            Sponsor del Festival
+            Partner Istituzionali
           </h2>
           <motion.div
-            className="h-1 w-20 bg-gradient-to-r from-amber-500 to-red-600 mx-auto rounded-full mb-8"
+            className="h-1 w-20 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full mb-8"
             whileHover={{ width: "120px" }}
           />
         </MotionDiv>
 
-        {/* Prima riga: ORGANIZZATO - PRODUCER - PATROCINIO E CONTRIBUTO */}
-        <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* ORGANIZZATO */}
-            <div>
-              <div className="text-center mb-4">
-                <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-                  ORGANIZZATO
-                </h3>
-              </div>
-              <div className="flex justify-center">
-                {organizzato.map((sponsor, index) => (
-                  <MotionDiv
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      className="flex items-center justify-center h-24"
-                    >
-                      <MotionImg
-                        src={sponsor.image}
-                        alt={sponsor.name}
-                        className="max-h-20 max-w-full object-contain"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
-                  </MotionDiv>
-                ))}
-              </div>
-            </div>
-
-            {/* PRODUCER */}
-            <div>
-              <div className="text-center mb-4">
-                <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-                  PRODUCER
-                </h3>
-              </div>
-              <div className="flex justify-center">
-                {producer.map((sponsor, index) => (
-                  <MotionDiv
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      className="flex items-center justify-center h-24"
-                    >
-                      <MotionImg
-                        src={sponsor.image}
-                        alt={sponsor.name}
-                        className="max-h-20 max-w-full object-contain"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
-                  </MotionDiv>
-                ))}
-              </div>
-            </div>
-
-            {/* PATROCINIO E CONTRIBUTO */}
-            <div>
-              <div className="text-center mb-4">
-                <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-                  PATROCINIO E CONTRIBUTO
-                </h3>
-              </div>
-              <div className="flex flex-wrap justify-center gap-3">
-                {patrocinioContributo.map((sponsor, index) => (
-                  <MotionDiv
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      className="flex items-center justify-center h-16 w-24"
-                    >
-                      <MotionImg
-                        src={sponsor.image}
-                        alt={sponsor.name}
-                        className="max-h-12 max-w-full object-contain"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
-                  </MotionDiv>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Seconda riga: PATROCINIO - PARTNERSHIP */}
-        <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* PATROCINIO */}
-            <div>
-              <div className="text-center mb-4">
-                <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-                  PATROCINIO
-                </h3>
-              </div>
-              <div className="flex flex-wrap justify-center gap-4">
-                {patrocinio.map((sponsor, index) => (
-                  <MotionDiv
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      className="flex items-center justify-center h-20 w-28"
-                    >
-                      <MotionImg
-                        src={sponsor.image}
-                        alt={sponsor.name}
-                        className="max-h-16 max-w-full object-contain"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
-                  </MotionDiv>
-                ))}
-              </div>
-            </div>
-
-            {/* PARTNERSHIP */}
-            <div>
-              <div className="text-center mb-4">
-                <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-                  PARTNERSHIP
-                </h3>
-              </div>
-              <div className="flex flex-wrap justify-center gap-4">
-                {partnership.map((sponsor, index) => (
-                  <MotionDiv
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      className="flex items-center justify-center h-20 w-28"
-                    >
-                      <MotionImg
-                        src={sponsor.image}
-                        alt={sponsor.name}
-                        className="max-h-16 max-w-full object-contain"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
-                  </MotionDiv>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* MAIN SPONSOR */}
-        <div className="mb-12">
-          <div className="text-center mb-4">
-            <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-              MAIN SPONSOR
+        {/* Sezione principale ispirata all'immagine */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+          {/* CO-ORGANIZZAZIONE */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-sm font-bold text-[#e30613] tracking-wider uppercase mb-8 text-center">
+              CO-ORGANIZZAZIONE
             </h3>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            {mainSponsor.map((sponsor, index) => (
-              <MotionDiv
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <motion.div
-                  whileHover={{ y: -3 }}
-                  className="flex items-center justify-center h-24 w-36"
+            <div className="flex flex-wrap justify-center gap-8 items-center">
+              {coOrganizzazione.map((partner, index) => (
+                <MotionDiv
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <MotionImg
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    className="max-h-20 max-w-full object-contain"
+                  <motion.div
                     whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                </motion.div>
-              </MotionDiv>
-            ))}
+                    className="flex items-center justify-center"
+                  >
+                    <MotionImg
+                      src={partner.image}
+                      alt={partner.name}
+                      className="max-h-20 max-w-full object-contain"
+                    />
+                  </motion.div>
+                </MotionDiv>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Categorie OFFICIAL */}
-        <div className="mb-12">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {officialCategories.map((category, catIndex) => (
-              <div key={catIndex} className="mb-6">
-                <div className="text-center mb-4">
-                  <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
-                    {category.title}
-                  </h3>
-                </div>
-                <div className="flex justify-center">
-                  {category.sponsors.map((sponsor, index) => (
-                    <MotionDiv
-                      key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="group"
-                    >
-                      <motion.div
-                        whileHover={{ y: -3 }}
-                        className="flex items-center justify-center h-16 w-24"
-                      >
-                        <MotionImg
-                          src={sponsor.image}
-                          alt={sponsor.name}
-                          className="max-h-12 max-w-full object-contain"
-                          whileHover={{ scale: 1.05 }}
-                          transition={{ duration: 0.2 }}
-                        />
-                      </motion.div>
-                    </MotionDiv>
-                  ))}
-                </div>
-              </div>
-            ))}
+          {/* PATROCINIO ISTITUZIONALE */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-sm font-bold text-[#e30613] tracking-wider uppercase mb-8 text-center">
+              PATROCINIO ISTITUZIONALE
+            </h3>
+            <div className="flex flex-wrap justify-center gap-8 items-center">
+              {patrocinioIstituzionale.map((partner, index) => (
+                <MotionDiv
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center justify-center"
+                  >
+                    <MotionImg
+                      src={partner.image}
+                      alt={partner.name}
+                      className="max-h-20 max-w-full object-contain"
+                    />
+                  </motion.div>
+                </MotionDiv>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* MEDIA PARTNER */}
-        <div>
-          <div className="text-center mb-4">
-            <h3 className="text-sm font-bold text-[#e30613] tracking-wider border-b border-gray-200 pb-2 mb-4">
+          {/* MEDIA PARTNER */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-sm font-bold text-[#e30613] tracking-wider uppercase mb-8 text-center">
               MEDIA PARTNER
             </h3>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            {mediaPartner.map((sponsor, index) => (
-              <MotionDiv
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <motion.div
-                  whileHover={{ y: -3 }}
-                  className="flex items-center justify-center h-20 w-32"
+            <div className="flex flex-wrap justify-center gap-8 items-center">
+              {mediaPartner.map((partner, index) => (
+                <MotionDiv
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <MotionImg
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    className="max-h-16 max-w-full object-contain"
+                  <motion.div
                     whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                </motion.div>
-              </MotionDiv>
-            ))}
+                    className="flex items-center justify-center"
+                  >
+                    <MotionImg
+                      src={partner.image}
+                      alt={partner.name}
+                      className="max-h-20 max-w-full object-contain"
+                    />
+                  </motion.div>
+                </MotionDiv>
+              ))}
+            </div>
           </div>
         </div>
       </div>
