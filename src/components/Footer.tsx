@@ -1,7 +1,7 @@
 import React from "react";
 import { MotionDiv } from "../components/ui/motion-div";
 import { Button } from "../components/ui/button";
-import { Facebook, Instagram, Twitter, MapPinIcon, UserIcon, PhoneIcon } from "lucide-react";
+import {  MapPinIcon, UserIcon, PhoneIcon } from "lucide-react";
 
 const quickLinks = [
   { name: "Chi Siamo", href: "#about" },
@@ -40,29 +40,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-600 mb-6 max-w-md">
               Celebra i sapori autentici dello street food preferito della Sicilia. Unisciti a noi per un weekend di delizie culinarie, spettacoli culturali e festeggiamenti comunitari.
             </p>
-            <div className="flex space-x-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-600"
-              >
-                <Facebook size={20} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-600"
-              >
-                <Instagram size={20} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-red-600"
-              >
-                <Twitter size={20} />
-              </Button>
-            </div>
+
           </MotionDiv>
 
           <MotionDiv
